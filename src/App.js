@@ -3,15 +3,19 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Navbar from "./components/navbar";
 import './styling.css';
+import DailySong from "./pages/DailySong";
 
 const App = () => {
   return (
     <BrowserRouter>
     <Navbar></Navbar>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-      </Routes>
+      <div className="page-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/dailysong" element={<DailySong />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 };

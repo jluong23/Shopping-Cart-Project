@@ -11,10 +11,6 @@ nav {
     padding: 0 1em;
     font-size: 2em;
 }
-
-.site-title{
-    font-size: 3rem;
-}
 nav a{
     color: inherit;
     text-decoration: none;
@@ -33,3 +29,12 @@ nav li:hover{
 nav li:active{
     background-color: #555;
 }
+
+.site-title{
+    font-size: 3rem;
+}
+
+.page-content{
+    padding: 0 1em;
+}
+
