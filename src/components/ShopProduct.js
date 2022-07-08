@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 const ShopProduct = (props) =>{
   return (
@@ -8,10 +9,10 @@ const ShopProduct = (props) =>{
       </div>
       <h2>{props.product.name}</h2>
       <div className='product-purchase'>
-        <button>-</button>
-        <input type="number" defaultValue="0"/>
-        <button>+</button>
-        <button className='product-add-basket'>Add to Basket</button>
+        <Button variant="success">-</Button>
+        <input type="number" defaultValue="0" readOnly/>
+        <Button variant="success">+</Button>
+        <Button className='product-add-basket' variant="warning">Add to Basket</Button>
       </div>
       </div>
   )
