@@ -7,7 +7,7 @@ import DailySong from "./pages/DailySong";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
     <Navbar></Navbar>
       <div className="page-content">
         <Routes>

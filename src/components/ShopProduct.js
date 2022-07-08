@@ -9,7 +9,7 @@ const ShopProduct = (props) =>{
       </div>
       <h2>{props.product.name}</h2>
       <div className='product-purchase'>
-        <Button variant="success">-</Button>
+        <Button variant="danger">-</Button>
         <input type="number" defaultValue="0" readOnly/>
         <Button variant="success">+</Button>
         <Button className='product-add-basket' variant="warning">Add to Basket</Button>
