@@ -7,7 +7,7 @@ import DailySong from "./pages/DailySong";
 
 const App = () => {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Navbar></Navbar>
       <div className="page-content">
         <Routes>
