@@ -17,6 +17,11 @@ const App = () => {
         </Routes>
       </div>
 
+      <footer>
+        Created by James Luong (2022)
+      </footer>
+
+      {/* bootstrap css */}
       <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
