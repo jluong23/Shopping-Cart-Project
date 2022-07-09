@@ -15,16 +15,21 @@ const ShopProduct = (props) =>{
   return (
     <div className='product'>
       <div className='product-image'>
-        <img src= {props.product.img}/>
+        <img src= {props.product.img} alt={props.product.name + " Album Cover"}  />
       </div>
       <h2>{props.product.name}</h2>
       <div className='product-purchase'>
-        <Button variant="danger" onClick={() => {decrementQuantity()}}>-</Button>
-        <input type="number" value={quantity} readOnly/>
-        <Button variant="success" onClick={() => {incrementQuantity()}}>+</Button>
-        <Button className='product-add-basket' variant="warning">Add to Basket</Button>
+        <h3>
+          {props.product.price}
+        </h3>
+        <div className='quantity-input'>
+          <Button size='sm' variant="danger" onClick={() => {decrementQuantity()}}>-</Button>
+          <input type="number" value={quantity} readOnly/>
+          <Button size='sm' variant="success" onClick={() => {incrementQuantity()}}>+</Button>
+        </div>
+        <Button size='sm' className='product-add-basket' variant="warning">Add to Basket</Button>
       </div>
-      </div>
+    </div>
   )
 }
 
