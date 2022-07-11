@@ -35,8 +35,24 @@
         "id": 5,
         "name": "Sob Rock",
         "year": 2021,
-        "img": "https://i.discogs.com/fKP_Hy-LoGaXTNky050bU7SWmHqqGbj4wll4VuwhbxE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5NDky/OTMzLTE2MjYyODU2/MTctOTg1MS5qcGVn.jpeg",
+        "img": "https://i.discogs.com/aOvDgl5aF_GoMjL2-NY_yCwd6rtOo-JZpAsOfX6hVmk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5NDky/NTkxLTE2MjY0MjQ4/MzQtMTAwNS5qcGVn.jpeg",
         "description": "Sob Rock is the eighth studio album by American singer-songwriter John Mayer, released on July 16, 2021, by Columbia Records. The single \"New Light\", released in May 2018, is included on the album, as are Mayer's two singles from 2019, \"I Guess I Just Feel Like\" and \"Carry Me Away\". The lead single \"Last Train Home\" was released on June 4, 2021, and features guest vocals from Maren Morris. Mayer toured the United States with Dead & Company from August through October 2021 and embarked on a solo tour in support of the album in 2022.",
         "price": "£29.99"
+    },
+    {
+        "id": 6,
+        "name": "Paradise Valley",
+        "year": 2013,
+        "img": "https://i.discogs.com/Ua1-8TJ2_KZ_8odwCLsPxsi6r4CzWsqutIX1CQDVLTs/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ4MjI0/MjItMTQ1OTMxNjM4/NC0xOTI3LmpwZWc.jpeg",
+        "description": "Sob Rock is the eighth studio album by American singer-songwriter John Mayer, released on July 16, 2021, by Columbia Records. The single \"New Light\", released in May 2018, is included on the album, as are Mayer's two singles from 2019, \"I Guess I Just Feel Like\" and \"Carry Me Away\". The lead single \"Last Train Home\" was released on June 4, 2021, and features guest vocals from Maren Morris. Mayer toured the United States with Dead & Company from August through October 2021 and embarked on a solo tour in support of the album in 2022.",
+        "price": "£19.99"
+    },
+    {
+        "id": 7,
+        "name": "Battle Studies",
+        "year": 2009,
+        "img": "https://i.discogs.com/k1AE-zAN8zMUxKvRcClgTvv6ms_RZ8uwa6gXYrPJf_A/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwMTYy/NTAtMTI1ODcyMTgw/Ny5qcGVn.jpeg",
+        "description": "Sob Rock is the eighth studio album by American singer-songwriter John Mayer, released on July 16, 2021, by Columbia Records. The single \"New Light\", released in May 2018, is included on the album, as are Mayer's two singles from 2019, \"I Guess I Just Feel Like\" and \"Carry Me Away\". The lead single \"Last Train Home\" was released on June 4, 2021, and features guest vocals from Maren Morris. Mayer toured the United States with Dead & Company from August through October 2021 and embarked on a solo tour in support of the album in 2022.",
+        "price": "£24.99"
     }
 ]

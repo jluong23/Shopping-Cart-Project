@@ -106,10 +106,14 @@ nav li:active{
 #shop-products{
     list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+#shop-products li{
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -192,5 +196,10 @@ nav li:active{
     .product-image{
         width: 30%;
     }
+
+    #shop-products{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
 
 }
