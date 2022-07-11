@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 
-const QuantityInput = () => {
+const QuantityInput = (props) => {
     
   const [quantity, setQuantity] = useState(1);
 

@@ -1,6 +1,6 @@
 // Product.js
 import {Link, useSearchParams } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import productData from "../products.json";
 import QuantityInput from "../components/QuantityInput";
 import Button from 'react-bootstrap/Button';
@@ -26,11 +26,13 @@ const Product = (props) => {
         </div>
         <div className="product-info">
           <h1>{product.name}</h1>
-          <div className="product-purchase">
+          <form className="product-purchase">
             <p>{product.price}</p>
-            <QuantityInput />
-            <Button variant="warning">Add to Basket</Button>
-          </div>
+            <QuantityInput/>
+            <Button variant="warning" onClick={() => {props.addToBasket(productId, 1)}}>
+              Add to Basket
+            </Button>
+          </form>
           <p>{product.description}</p>
         </div>
       </div>

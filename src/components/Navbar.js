@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {  Link } from "react-router-dom";
 import {BsFillBasket2Fill} from "react-icons/bs";
-const Navbar= () =>{
+const Navbar= (props) =>{
+  let basket = props.basket;
+  const getBasketItems = () => {
+    let count = 0;
+    basket.forEach(item => {
+      count+=item["quantity"];
+    });
+    return count;
+}
+
   return (
   <nav>
       <div className='site-title'>
@@ -13,7 +22,7 @@ const Navbar= () =>{
         <li>
           <Link to ="/checkout">
             <BsFillBasket2Fill/>
-            <span>1</span>
+            <span className='checkout-basket'>{getBasketItems()}</span>
           </Link>
         </li>
 

@@ -8,16 +8,12 @@ import { Link } from "react-router-dom";
 
 
 const Home = (props) => {
-  const setHeaderAndFooter = (isVisible) => {
-    props.setNavBarVisible(isVisible);
-    props.setFooterVisible(isVisible);
-  }
-  useEffect( () => {
+  useEffect(() => {
     // hide nav bar and footer on home
-    setHeaderAndFooter(false);
+    props.setHeaderAndFooter(false);
     return function cleanup(){
       // return the header and footer on other pages
-      setHeaderAndFooter(true);
+      props.setHeaderAndFooter(true);
     }
   });
   

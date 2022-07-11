@@ -72,6 +72,11 @@ nav li:active{
     text-align: center;
 }
 
+.checkout-basket{
+    font-size: .7em;
+    margin-top: 1em;
+}
+
 /* home */
 
 .home {
@@ -85,7 +90,6 @@ nav li:active{
 .home-image{
     display: flex;
     justify-content: center; 
-    /* align-items: center; */
     width: 100%;
 }
 
