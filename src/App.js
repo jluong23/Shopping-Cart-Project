@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import './styling.css';
 import DailySong from "./pages/DailySong";
 import React, { useState } from 'react';

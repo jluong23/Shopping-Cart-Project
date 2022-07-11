@@ -13,6 +13,7 @@ const Navbar= () =>{
         <li>
           <Link to ="/checkout">
             <BsFillBasket2Fill/>
+            <span>1</span>
           </Link>
         </li>
 
