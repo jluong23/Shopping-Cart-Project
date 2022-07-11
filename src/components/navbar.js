@@ -1,6 +1,6 @@
 import React from 'react';
 import {  Link } from "react-router-dom";
-
+import {BsFillBasket2Fill} from "react-icons/bs";
 const Navbar= () =>{
   return (
   <nav>
@@ -10,6 +10,12 @@ const Navbar= () =>{
       <ul>
         <li><Link to="/shop">Shop</Link></li>
         <li><Link to="/dailysong">Daily Song</Link></li>
+        <li>
+          <Link to ="/checkout">
+            <BsFillBasket2Fill/>
+          </Link>
+        </li>
+
       </ul>
   </nav>
   );
