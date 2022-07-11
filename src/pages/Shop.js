@@ -10,9 +10,12 @@ const Shop = () => {
         <h1 className="page-title">Shop</h1>
         <ul className="shop-products">
           {productData.map((p) => {
-            return <ShopProduct product={p}/>
+            return (
+              <li key={p.id}>
+                <ShopProduct product={p}/>
+              </li>
+            )})
           }
-          )}
         </ul>
       </div>
     );

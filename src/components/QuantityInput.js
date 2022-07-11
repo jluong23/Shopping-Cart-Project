@@ -13,13 +13,13 @@ const QuantityInput = () => {
     if(quantity > 1) setQuantity(quantity - 1);
 
   }
-    return(
-        <div className='quantity-input'>
-        <Button size='sm' variant="danger" onClick={() => {decrementQuantity()}}>-</Button>
-        <input type="number" value={quantity} readOnly/>
-        <Button size='sm' variant="success" onClick={() => {incrementQuantity()}}>+</Button>
-      </div>
-    )
+  return(
+      <div className='quantity-input'>
+      <Button size='sm' variant="danger" onClick={() => {decrementQuantity()}}>-</Button>
+      <input type="number" value={quantity} readOnly/>
+      <Button size='sm' variant="success" onClick={() => {incrementQuantity()}}>+</Button>
+    </div>
+  )
 }
 
 export default QuantityInput;

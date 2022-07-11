@@ -8,11 +8,16 @@ import { Link } from "react-router-dom";
 
 
 const Home = (props) => {
+  const setHeaderAndFooter = (isVisible) => {
+    props.setNavBarVisible(isVisible);
+    props.setFooterVisible(isVisible);
+  }
   useEffect( () => {
-    // hide nav bar on load
-    props.setNavBarHidden(true);
+    // hide nav bar and footer on home
+    setHeaderAndFooter(false);
   });
   
+
   return (
     <div className="home">
       <img className="home-image" src={homeImageFile} alt="img" />
@@ -23,10 +28,10 @@ const Home = (props) => {
       </div>
       <div className="home-options">
         <Link to ="/shop">
-          <Button size="lg" variant="warning" onClick={() => {props.setNavBarHidden(false)}}>Go to shop</Button>
+          <Button size="lg" variant="warning" onClick={() => {setHeaderAndFooter(true)}}>Go to shop</Button>
         </Link>
         <Link to ="/dailysong">
-          <Button size="lg" variant="success" onClick={() => {props.setNavBarHidden(false)}}>Daily Song</Button>
+          <Button size="lg" variant="success" onClick={() => {setHeaderAndFooter(true)}}>Daily Song</Button>
         </Link>
       </div>
     </div>

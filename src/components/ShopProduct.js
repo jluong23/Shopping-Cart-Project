@@ -1,16 +1,25 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
+
 const ShopProduct = (props) =>{
 
+  const product = props.product;
+  const productLink = "/product/" + product.id;
   return (
-    <div className='product'>
-      <div className='product-image'>
-        <img src= {props.product.img} alt={props.product.name + " Album Cover"}  />
+      <div className='product'>
+        <Link to={productLink}>
+          <div className='product-image'>
+            <img src= {product.img} alt={product.name + " Album Cover"}  />
+          </div>
+        </Link>
+        <Link style={{textDecoration: 'none', color: 'inherit'}} to={productLink}>
+          <strong>{product.name}</strong>
+        </Link>
+        <p>
+          {product.price}
+        </p>
       </div>
-      <strong>{props.product.name}</strong>
-      <p>
-        {props.product.price}
-      </p>
-    </div>
   )
 }
 

@@ -1,6 +1,8 @@
 body{
     margin: 0;
     min-width: 700px;
+    background-image: url('assets/standard_pattern.png');
+
 }
 .site-title{
     font-size: 1.2em;
@@ -72,9 +74,6 @@ nav li:active{
 }
 
 /* home */
-.home {    
-    /* background-color: rgb(3,82,179);   */
-}
 .home-image{
     width: 100%;
 }
