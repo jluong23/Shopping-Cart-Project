@@ -43,9 +43,17 @@ const App = () => {
     setBasket(newBasket)
   }
 
+  const getBasketCount = () => {
+    let count = 0;
+    basket.forEach(item => {
+      count+=item["quantity"];
+    });
+    return count;
+}
+
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-    {navBarVisible ? <Navbar basket={basket}/> : null} 
+    {navBarVisible ? <Navbar basket={basket} getBasketCount={getBasketCount}/> : null} 
     <div className="page-content">
       <Routes>
         <Route path="/" 
