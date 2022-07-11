@@ -37,6 +37,15 @@ const Shop = () => {
           <li>
             <ShopProduct product = {product3}/>
           </li>
+          <li>
+            <ShopProduct product = {product1}/>
+          </li>
+          <li>
+            <ShopProduct product = {product2}/>
+          </li>
+          <li>
+            <ShopProduct product = {product3}/>
+          </li>
         </ul>
       </div>
     );
