@@ -1,6 +1,6 @@
 // Home.js
 
-import React, { Component, useEffect } from "react";
+import React, {useEffect} from "react";
 import homeImageFile from "../assets/john.jpg"
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
@@ -24,7 +24,9 @@ const Home = (props) => {
 
   return (
     <div className="home">
-      <img className="home-image" src={homeImageFile} alt="img" />
+      <div className="home-image">
+        <img src={homeImageFile} alt="Home image of John Mayer"/>
+      </div>
       <div className="home-description">
         <h1>
           The man, the myth, the legend

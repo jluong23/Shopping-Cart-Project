@@ -6,9 +6,9 @@ import productData from "../products.json";
 const Shop = () => {
 
     return (
-      <div>
-        <h1>Shop</h1>
-        <ul className="shop-products">
+      <div id="shop">
+        <h1 id="shop-title">Shop</h1>
+        <ul id="shop-products">
           {productData.map((p) => {
             return (
               <li key={p.id}>

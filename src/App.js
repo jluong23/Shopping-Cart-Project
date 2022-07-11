@@ -21,7 +21,7 @@ const App = () => {
             element={<Home setNavBarVisible={setNavBarVisible} setFooterVisible = {setFooterVisible} />}/>
           <Route path="/shop" element={<Shop />} />
           <Route path="/dailysong" element={<DailySong />} />
-          {/* <Route path="/product/1" element ={<Product />} /> */}
+          <Route path="/product" element ={<Product />} />
         </Routes>
       </div>
       {footerVisible ? <Footer /> : null}
