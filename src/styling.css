@@ -69,10 +69,6 @@ nav li:active{
     flex-direction: column;
 }
 
-.page-title{
-    text-align: center;
-}
-
 /* home */
 .home-image{
     width: 100%;

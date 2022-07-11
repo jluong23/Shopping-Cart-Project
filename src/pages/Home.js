@@ -15,6 +15,10 @@ const Home = (props) => {
   useEffect( () => {
     // hide nav bar and footer on home
     setHeaderAndFooter(false);
+    return function cleanup(){
+      // return the header and footer on other pages
+      setHeaderAndFooter(true);
+    }
   });
   
 
@@ -28,10 +32,10 @@ const Home = (props) => {
       </div>
       <div className="home-options">
         <Link to ="/shop">
-          <Button size="lg" variant="warning" onClick={() => {setHeaderAndFooter(true)}}>Go to shop</Button>
+          <Button size="lg" variant="warning">Go to shop</Button>
         </Link>
         <Link to ="/dailysong">
-          <Button size="lg" variant="success" onClick={() => {setHeaderAndFooter(true)}}>Daily Song</Button>
+          <Button size="lg" variant="success">Daily Song</Button>
         </Link>
       </div>
     </div>
