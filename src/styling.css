@@ -94,11 +94,12 @@ nav li:active{
     width: 100%;
     margin: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .home-options .btn {
     padding: .5em 1em;
+    margin: 0 1em;
 }
 
 /* shop */
@@ -153,12 +154,30 @@ nav li:active{
     width: 50%;
 }
 
+.product-info{
+    max-width: 340px;
+}
+
 .product-image > img{
     width: 100%;
 }
 
+.product-purchase {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-purchase > p {
+    font-size: 2em;
+    margin: 0;
+}
+
+
 .quantity-input {
     padding: 0 1em;
+    display: flex;
+    align-items: center;
 }
 .quantity-input input[type="number"]{
     width: 2em;

@@ -2,7 +2,8 @@
 import {Link, useSearchParams } from "react-router-dom";
 import React from "react";
 import productData from "../products.json";
-
+import QuantityInput from "../components/QuantityInput";
+import Button from 'react-bootstrap/Button';
 const Product = (props) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const errorMsg = (
@@ -25,6 +26,12 @@ const Product = (props) => {
         </div>
         <div className="product-info">
           <h1>{product.name}</h1>
+          <div className="product-purchase">
+            <p>{product.price}</p>
+            <QuantityInput />
+            <Button variant="warning">Add to Basket</Button>
+          </div>
+          <p>{product.description}</p>
         </div>
       </div>
     );
