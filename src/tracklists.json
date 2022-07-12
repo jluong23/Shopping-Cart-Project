@@ -1,0 +1,1967 @@
+{
+    "149466": [
+        {
+            "position": "1",
+            "type_": "track",
+            "title": "No Such Thing",
+            "extraartists": [
+                {
+                    "name": "Brandon Bush",
+                    "anv": "",
+                    "join": "",
+                    "role": "Electric Piano [Wurlitzer]",
+                    "tracks": "",
+                    "id": 404890,
+                    "resource_url": "https://api.discogs.com/artists/404890"
+                },
+                {
+                    "name": "Clay Cook",
+                    "anv": "",
+                    "join": "",
+                    "role": "Music By",
+                    "tracks": "",
+                    "id": 506958,
+                    "resource_url": "https://api.discogs.com/artists/506958"
+                },
+                {
+                    "name": "John Mayer",
+                    "anv": "John",
+                    "join": "",
+                    "role": "Omnichord, Synthesizer [Korg Triton]",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                }
+            ],
+            "duration": "3:51"
+        },
+        {
+            "position": "2",
+            "type_": "track",
+            "title": "Why Georgia",
+            "extraartists": [
+                {
+                    "name": "Clay Cook",
+                    "anv": "",
+                    "join": "",
+                    "role": "Backing Vocals",
+                    "tracks": "",
+                    "id": 506958,
+                    "resource_url": "https://api.discogs.com/artists/506958"
+                },
+                {
+                    "name": "Doug Derryberry",
+                    "anv": "",
+                    "join": "",
+                    "role": "Backing Vocals",
+                    "tracks": "",
+                    "id": 420388,
+                    "resource_url": "https://api.discogs.com/artists/420388"
+                },
+                {
+                    "name": "Nir Z",
+                    "anv": "",
+                    "join": "",
+                    "role": "Loops",
+                    "tracks": "",
+                    "id": 506956,
+                    "resource_url": "https://api.discogs.com/artists/506956"
+                }
+            ],
+            "duration": "4:29"
+        },
+        {
+            "position": "3",
+            "type_": "track",
+            "title": "My Stupid Mouth",
+            "duration": "3:45"
+        },
+        {
+            "position": "4",
+            "type_": "track",
+            "title": "Your Body Is A Wonderland",
+            "extraartists": [
+                {
+                    "name": "Chris Fisher (2)",
+                    "anv": "",
+                    "join": "",
+                    "role": "Congas",
+                    "tracks": "",
+                    "id": 575824,
+                    "resource_url": "https://api.discogs.com/artists/575824"
+                },
+                {
+                    "name": "Brandon Bush",
+                    "anv": "",
+                    "join": "",
+                    "role": "Electric Piano [Wurlitzer]",
+                    "tracks": "",
+                    "id": 404890,
+                    "resource_url": "https://api.discogs.com/artists/404890"
+                },
+                {
+                    "name": "John Alagia",
+                    "anv": "",
+                    "join": "",
+                    "role": "Organ [Hammond]",
+                    "tracks": "",
+                    "id": 299587,
+                    "resource_url": "https://api.discogs.com/artists/299587"
+                },
+                {
+                    "name": "John Mayer",
+                    "anv": "John",
+                    "join": "",
+                    "role": "Toy Piano, Synthesizer [Korg Triton], Vibraphone",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                }
+            ],
+            "duration": "4:10"
+        },
+        {
+            "position": "5",
+            "type_": "track",
+            "title": "Neon",
+            "extraartists": [
+                {
+                    "name": "Clay Cook",
+                    "anv": "",
+                    "join": "",
+                    "role": "Backing Vocals",
+                    "tracks": "",
+                    "id": 506958,
+                    "resource_url": "https://api.discogs.com/artists/506958"
+                },
+                {
+                    "name": "Doug Derryberry",
+                    "anv": "",
+                    "join": "",
+                    "role": "Backing Vocals",
+                    "tracks": "",
+                    "id": 420388,
+                    "resource_url": "https://api.discogs.com/artists/420388"
+                },
+                {
+                    "name": "Brandon Bush",
+                    "anv": "",
+                    "join": "",
+                    "role": "Electric Piano [Fender Rhodes]",
+                    "tracks": "",
+                    "id": 404890,
+                    "resource_url": "https://api.discogs.com/artists/404890"
+                },
+                {
+                    "name": "John Alagia",
+                    "anv": "",
+                    "join": "",
+                    "role": "Guitar",
+                    "tracks": "",
+                    "id": 299587,
+                    "resource_url": "https://api.discogs.com/artists/299587"
+                },
+                {
+                    "name": "Clay Cook",
+                    "anv": "",
+                    "join": "",
+                    "role": "Music By",
+                    "tracks": "",
+                    "id": 506958,
+                    "resource_url": "https://api.discogs.com/artists/506958"
+                },
+                {
+                    "name": "John Mayer",
+                    "anv": "John",
+                    "join": "",
+                    "role": "Omnichord",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                }
+            ],
+            "duration": "4:22"
+        },
+        {
+            "position": "6",
+            "type_": "track",
+            "title": "City Love",
+            "extraartists": [
+                {
+                    "name": "Carole Rabinowitz",
+                    "anv": "Carol Rabinowitz",
+                    "join": "",
+                    "role": "Cello",
+                    "tracks": "",
+                    "id": 542241,
+                    "resource_url": "https://api.discogs.com/artists/542241"
+                },
+                {
+                    "name": "John Catchings",
+                    "anv": "Jon Catchings",
+                    "join": "",
+                    "role": "Cello",
+                    "tracks": "",
+                    "id": 267645,
+                    "resource_url": "https://api.discogs.com/artists/267645"
+                },
+                {
+                    "name": "Brandon Bush",
+                    "anv": "",
+                    "join": "",
+                    "role": "Electric Piano [Wurlitzer]",
+                    "tracks": "",
+                    "id": 404890,
+                    "resource_url": "https://api.discogs.com/artists/404890"
+                },
+                {
+                    "name": "Kristin Wilkinson",
+                    "anv": "",
+                    "join": "",
+                    "role": "Viola",
+                    "tracks": "",
+                    "id": 477740,
+                    "resource_url": "https://api.discogs.com/artists/477740"
+                },
+                {
+                    "name": "David Angell",
+                    "anv": "",
+                    "join": "",
+                    "role": "Violin",
+                    "tracks": "",
+                    "id": 506954,
+                    "resource_url": "https://api.discogs.com/artists/506954"
+                },
+                {
+                    "name": "David Davidson",
+                    "anv": "",
+                    "join": "",
+                    "role": "Violin",
+                    "tracks": "",
+                    "id": 271174,
+                    "resource_url": "https://api.discogs.com/artists/271174"
+                }
+            ],
+            "duration": "4:00"
+        },
+        {
+            "position": "7",
+            "type_": "track",
+            "title": "83",
+            "extraartists": [
+                {
+                    "name": "John Mayer",
+                    "anv": "John",
+                    "join": "",
+                    "role": "Synthesizer [Korg Triton]",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                }
+            ],
+            "duration": "4:51"
+        },
+        {
+            "position": "8",
+            "type_": "track",
+            "title": "3X5",
+            "extraartists": [
+                {
+                    "name": "Jerry Marotta",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums",
+                    "tracks": "",
+                    "id": 262270,
+                    "resource_url": "https://api.discogs.com/artists/262270"
+                }
+            ],
+            "duration": "4:50"
+        },
+        {
+            "position": "9",
+            "type_": "track",
+            "title": "Love Song For No One",
+            "extraartists": [
+                {
+                    "name": "Clay Cook",
+                    "anv": "",
+                    "join": "",
+                    "role": "Backing Vocals",
+                    "tracks": "",
+                    "id": 506958,
+                    "resource_url": "https://api.discogs.com/artists/506958"
+                },
+                {
+                    "name": "Doug Derryberry",
+                    "anv": "",
+                    "join": "",
+                    "role": "Backing Vocals",
+                    "tracks": "",
+                    "id": 420388,
+                    "resource_url": "https://api.discogs.com/artists/420388"
+                },
+                {
+                    "name": "Brandon Bush",
+                    "anv": "",
+                    "join": "",
+                    "role": "Electric Piano [Wurlitzer]",
+                    "tracks": "",
+                    "id": 404890,
+                    "resource_url": "https://api.discogs.com/artists/404890"
+                },
+                {
+                    "name": "John Alagia",
+                    "anv": "",
+                    "join": "",
+                    "role": "Guitar",
+                    "tracks": "",
+                    "id": 299587,
+                    "resource_url": "https://api.discogs.com/artists/299587"
+                },
+                {
+                    "name": "Clay Cook",
+                    "anv": "",
+                    "join": "",
+                    "role": "Music By",
+                    "tracks": "",
+                    "id": 506958,
+                    "resource_url": "https://api.discogs.com/artists/506958"
+                }
+            ],
+            "duration": "3:22"
+        },
+        {
+            "position": "10",
+            "type_": "track",
+            "title": "Back To You",
+            "extraartists": [
+                {
+                    "name": "John Mayer",
+                    "anv": "John",
+                    "join": "",
+                    "role": "Omnichord, Synthesizer [Korg Triton]",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                }
+            ],
+            "duration": "4:02"
+        },
+        {
+            "position": "11",
+            "type_": "track",
+            "title": "Great Indoors",
+            "extraartists": [
+                {
+                    "name": "John Mayer",
+                    "anv": "John",
+                    "join": "",
+                    "role": "Percussion, Synthesizer [Korg Triton]",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                }
+            ],
+            "duration": "3:36"
+        },
+        {
+            "position": "12",
+            "type_": "track",
+            "title": "Not Myself",
+            "extraartists": [
+                {
+                    "name": "Brandon Bush",
+                    "anv": "",
+                    "join": "",
+                    "role": "Mellotron",
+                    "tracks": "",
+                    "id": 404890,
+                    "resource_url": "https://api.discogs.com/artists/404890"
+                },
+                {
+                    "name": "John Mayer",
+                    "anv": "John",
+                    "join": "",
+                    "role": "Omnichord",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                }
+            ],
+            "duration": "3:40"
+        },
+        {
+            "position": "14",
+            "type_": "track",
+            "title": "St. Patrick's Day",
+            "extraartists": [
+                {
+                    "name": "John Alagia",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bells [Jingle]",
+                    "tracks": "",
+                    "id": 299587,
+                    "resource_url": "https://api.discogs.com/artists/299587"
+                },
+                {
+                    "name": "Brandon Bush",
+                    "anv": "",
+                    "join": "",
+                    "role": "Electric Piano [Fender Rhodes], Mellotron",
+                    "tracks": "",
+                    "id": 404890,
+                    "resource_url": "https://api.discogs.com/artists/404890"
+                }
+            ],
+            "duration": "5:21"
+        }
+    ],
+    "170454": [
+        {
+            "position": "1",
+            "type_": "track",
+            "title": "Waiting On The World To Change",
+            "extraartists": [
+                {
+                    "name": "Roy Hargrove",
+                    "anv": "",
+                    "join": "",
+                    "role": "Horns",
+                    "tracks": "",
+                    "id": 99438,
+                    "resource_url": "https://api.discogs.com/artists/99438"
+                },
+                {
+                    "name": "Harley Pasternak",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 1092148,
+                    "resource_url": "https://api.discogs.com/artists/1092148"
+                },
+                {
+                    "name": "Jeannie Martinez",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 1092150,
+                    "resource_url": "https://api.discogs.com/artists/1092150"
+                },
+                {
+                    "name": "John Mayer",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                },
+                {
+                    "name": "Kristen Moss",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 1092144,
+                    "resource_url": "https://api.discogs.com/artists/1092144"
+                },
+                {
+                    "name": "Lee Padgett",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 1092153,
+                    "resource_url": "https://api.discogs.com/artists/1092153"
+                },
+                {
+                    "name": "Maggie Slavonic",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 1092152,
+                    "resource_url": "https://api.discogs.com/artists/1092152"
+                },
+                {
+                    "name": "Pino Palladino",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 208234,
+                    "resource_url": "https://api.discogs.com/artists/208234"
+                },
+                {
+                    "name": "Ricky Cytonbaum",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 1092151,
+                    "resource_url": "https://api.discogs.com/artists/1092151"
+                },
+                {
+                    "name": "Sandy Vongdasy",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 1092154,
+                    "resource_url": "https://api.discogs.com/artists/1092154"
+                },
+                {
+                    "name": "Scotty Crowe",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 1092145,
+                    "resource_url": "https://api.discogs.com/artists/1092145"
+                },
+                {
+                    "name": "Steve Jordan",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals [Group]",
+                    "tracks": "",
+                    "id": 173865,
+                    "resource_url": "https://api.discogs.com/artists/173865"
+                }
+            ],
+            "duration": "3:20"
+        },
+        {
+            "position": "2",
+            "type_": "track",
+            "title": "I Don't Trust Myself (With Loving You)",
+            "extraartists": [
+                {
+                    "name": "Willie Weeks",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass",
+                    "tracks": "",
+                    "id": 256149,
+                    "resource_url": "https://api.discogs.com/artists/256149"
+                },
+                {
+                    "name": "Roy Hargrove",
+                    "anv": "",
+                    "join": "",
+                    "role": "Horns",
+                    "tracks": "",
+                    "id": 99438,
+                    "resource_url": "https://api.discogs.com/artists/99438"
+                }
+            ],
+            "duration": "4:51"
+        },
+        {
+            "position": "3",
+            "type_": "track",
+            "title": "Belief",
+            "extraartists": [
+                {
+                    "name": "Ben Harper",
+                    "anv": "",
+                    "join": "",
+                    "role": "Guitar",
+                    "tracks": "",
+                    "id": 42599,
+                    "resource_url": "https://api.discogs.com/artists/42599"
+                },
+                {
+                    "name": "Manolo Badrena",
+                    "anv": "",
+                    "join": "",
+                    "role": "Percussion",
+                    "tracks": "",
+                    "id": 279707,
+                    "resource_url": "https://api.discogs.com/artists/279707"
+                }
+            ],
+            "duration": "4:02"
+        },
+        {
+            "position": "4",
+            "type_": "track",
+            "title": "Gravity",
+            "extraartists": [
+                {
+                    "name": "Larry Goldings",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards, Organ",
+                    "tracks": "",
+                    "id": 258663,
+                    "resource_url": "https://api.discogs.com/artists/258663"
+                }
+            ],
+            "duration": "4:05"
+        },
+        {
+            "position": "5",
+            "type_": "track",
+            "title": "The Heart Of Life",
+            "duration": "3:18"
+        },
+        {
+            "position": "6",
+            "type_": "track",
+            "title": "Vultures",
+            "extraartists": [
+                {
+                    "name": "Pino Palladino",
+                    "anv": "",
+                    "join": "",
+                    "role": "Songwriter",
+                    "tracks": "",
+                    "id": 208234,
+                    "resource_url": "https://api.discogs.com/artists/208234"
+                },
+                {
+                    "name": "Steve Jordan",
+                    "anv": "",
+                    "join": "",
+                    "role": "Songwriter",
+                    "tracks": "",
+                    "id": 173865,
+                    "resource_url": "https://api.discogs.com/artists/173865"
+                }
+            ],
+            "duration": "4:11"
+        },
+        {
+            "position": "7",
+            "type_": "track",
+            "title": "Stop This Train",
+            "extraartists": [
+                {
+                    "name": "John Alagia",
+                    "anv": "",
+                    "join": "",
+                    "role": "Engineer",
+                    "tracks": "",
+                    "id": 299587,
+                    "resource_url": "https://api.discogs.com/artists/299587"
+                },
+                {
+                    "name": "James Valentine (2)",
+                    "anv": "",
+                    "join": "",
+                    "role": "Guitar",
+                    "tracks": "",
+                    "id": 821154,
+                    "resource_url": "https://api.discogs.com/artists/821154"
+                },
+                {
+                    "name": "Jamie Muhoberac",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 109822,
+                    "resource_url": "https://api.discogs.com/artists/109822"
+                }
+            ],
+            "duration": "4:44"
+        },
+        {
+            "position": "8",
+            "type_": "track",
+            "title": "Slow Dancing In A Burning Room",
+            "duration": "4:01"
+        },
+        {
+            "position": "9",
+            "type_": "track",
+            "title": "Bold As Love",
+            "extraartists": [
+                {
+                    "name": "Jimi Hendrix",
+                    "anv": "",
+                    "join": "",
+                    "role": "Songwriter",
+                    "tracks": "",
+                    "id": 110593,
+                    "resource_url": "https://api.discogs.com/artists/110593"
+                }
+            ],
+            "duration": "4:17"
+        },
+        {
+            "position": "10",
+            "type_": "track",
+            "title": "Dreaming With A Broken Heart",
+            "extraartists": [
+                {
+                    "name": "Ricky Peterson",
+                    "anv": "",
+                    "join": "",
+                    "role": "Piano",
+                    "tracks": "",
+                    "id": 246205,
+                    "resource_url": "https://api.discogs.com/artists/246205"
+                }
+            ],
+            "duration": "4:07"
+        },
+        {
+            "position": "11",
+            "type_": "track",
+            "title": "In Repair",
+            "extraartists": [
+                {
+                    "name": "James Valentine (2)",
+                    "anv": "",
+                    "join": "",
+                    "role": "Guitar",
+                    "tracks": "",
+                    "id": 821154,
+                    "resource_url": "https://api.discogs.com/artists/821154"
+                },
+                {
+                    "name": "Charlie Hunter",
+                    "anv": "",
+                    "join": "",
+                    "role": "Guitar [8 String], Songwriter",
+                    "tracks": "",
+                    "id": 37565,
+                    "resource_url": "https://api.discogs.com/artists/37565"
+                },
+                {
+                    "name": "Jamie Muhoberac",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 109822,
+                    "resource_url": "https://api.discogs.com/artists/109822"
+                }
+            ],
+            "duration": "6:09"
+        },
+        {
+            "position": "12",
+            "type_": "track",
+            "title": "I'm Gonna Find Another You",
+            "extraartists": [
+                {
+                    "name": "Lester Snell",
+                    "anv": "",
+                    "join": "",
+                    "role": "Arranged By [Horns, Assistant], Electric Piano [Fender Rhodes], Organ",
+                    "tracks": "",
+                    "id": 84130,
+                    "resource_url": "https://api.discogs.com/artists/84130"
+                },
+                {
+                    "name": "Boo Mitchell",
+                    "anv": "",
+                    "join": "",
+                    "role": "Arranged By [Horns], Recorded By [Horns & Vocals, Assistant]",
+                    "tracks": "",
+                    "id": 1092147,
+                    "resource_url": "https://api.discogs.com/artists/1092147"
+                },
+                {
+                    "name": "Willie Mitchell",
+                    "anv": "",
+                    "join": "",
+                    "role": "Arranged By [Horns], Recorded By [Horns & Vocals]",
+                    "tracks": "",
+                    "id": 145293,
+                    "resource_url": "https://api.discogs.com/artists/145293"
+                },
+                {
+                    "name": "Jim Mahorn",
+                    "anv": "",
+                    "join": "",
+                    "role": "Baritone Saxophone",
+                    "tracks": "",
+                    "id": 1092155,
+                    "resource_url": "https://api.discogs.com/artists/1092155"
+                },
+                {
+                    "name": "Chalmers Alford",
+                    "anv": "Chalmers 'Spanky' Alford",
+                    "join": "",
+                    "role": "Guitar",
+                    "tracks": "",
+                    "id": 616038,
+                    "resource_url": "https://api.discogs.com/artists/616038"
+                },
+                {
+                    "name": "Lannie McMillan",
+                    "anv": "",
+                    "join": "",
+                    "role": "Tenor Saxophone",
+                    "tracks": "",
+                    "id": 330384,
+                    "resource_url": "https://api.discogs.com/artists/330384"
+                },
+                {
+                    "name": "Jack Hale, Sr.",
+                    "anv": "Jack Hale",
+                    "join": "",
+                    "role": "Trombone",
+                    "tracks": "",
+                    "id": 1682004,
+                    "resource_url": "https://api.discogs.com/artists/1682004"
+                },
+                {
+                    "name": "Ben Carley",
+                    "anv": "",
+                    "join": "",
+                    "role": "Trumpet",
+                    "tracks": "",
+                    "id": 1092146,
+                    "resource_url": "https://api.discogs.com/artists/1092146"
+                }
+            ],
+            "duration": "2:42"
+        }
+    ],
+    "206779": [
+        {
+            "position": "1",
+            "type_": "track",
+            "title": "Heartbreak Warfare",
+            "extraartists": [
+                {
+                    "name": "Jamie Muhoberac",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 109822,
+                    "resource_url": "https://api.discogs.com/artists/109822"
+                }
+            ],
+            "duration": "4:30"
+        },
+        {
+            "position": "2",
+            "type_": "track",
+            "title": "All We Ever Do Is Say Goodbye",
+            "extraartists": [
+                {
+                    "name": "Robbie McIntosh",
+                    "anv": "",
+                    "join": "",
+                    "role": "Guitar",
+                    "tracks": "",
+                    "id": 266076,
+                    "resource_url": "https://api.discogs.com/artists/266076"
+                }
+            ],
+            "duration": "4:35"
+        },
+        {
+            "position": "3",
+            "type_": "track",
+            "title": "Half Of My Heart",
+            "extraartists": [
+                {
+                    "name": "Waddy Wachtel",
+                    "anv": "",
+                    "join": "",
+                    "role": "Acoustic Guitar",
+                    "tracks": "",
+                    "id": 258154,
+                    "resource_url": "https://api.discogs.com/artists/258154"
+                },
+                {
+                    "name": "Taylor Swift",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals",
+                    "tracks": "",
+                    "id": 1124645,
+                    "resource_url": "https://api.discogs.com/artists/1124645"
+                }
+            ],
+            "duration": "4:10"
+        },
+        {
+            "position": "4",
+            "type_": "track",
+            "title": "Who Says",
+            "extraartists": [
+                {
+                    "name": "Ian McLagan",
+                    "anv": "",
+                    "join": "",
+                    "role": "Organ [Pump], Celesta",
+                    "tracks": "",
+                    "id": 306714,
+                    "resource_url": "https://api.discogs.com/artists/306714"
+                }
+            ],
+            "duration": "2:56"
+        },
+        {
+            "position": "5",
+            "type_": "track",
+            "title": "Perfectly Lonely",
+            "extraartists": [
+                {
+                    "name": "Ian McLagan",
+                    "anv": "",
+                    "join": "",
+                    "role": "Organ [Hammond B-3], Electric Piano [Wurlitzer]",
+                    "tracks": "",
+                    "id": 306714,
+                    "resource_url": "https://api.discogs.com/artists/306714"
+                }
+            ],
+            "duration": "4:28"
+        },
+        {
+            "position": "6",
+            "type_": "track",
+            "title": "Assassin",
+            "duration": "5:14"
+        },
+        {
+            "position": "7",
+            "type_": "track",
+            "title": "Crossroads",
+            "extraartists": [
+                {
+                    "name": "Robert Johnson",
+                    "anv": "",
+                    "join": "",
+                    "role": "Written-By",
+                    "tracks": "",
+                    "id": 272142,
+                    "resource_url": "https://api.discogs.com/artists/272142"
+                }
+            ],
+            "duration": "2:29"
+        },
+        {
+            "position": "8",
+            "type_": "track",
+            "title": "War Of My Life",
+            "extraartists": [
+                {
+                    "name": "Ian McLagan",
+                    "anv": "",
+                    "join": "",
+                    "role": "Electric Piano [Wurlitzer]",
+                    "tracks": "",
+                    "id": 306714,
+                    "resource_url": "https://api.discogs.com/artists/306714"
+                }
+            ],
+            "duration": "4:15"
+        },
+        {
+            "position": "9",
+            "type_": "track",
+            "title": "Edge Of Desire",
+            "extraartists": [
+                {
+                    "name": "Jamie Muhoberac",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 109822,
+                    "resource_url": "https://api.discogs.com/artists/109822"
+                },
+                {
+                    "name": "Ian McLagan",
+                    "anv": "",
+                    "join": "",
+                    "role": "Organ [Hammond B-3]",
+                    "tracks": "",
+                    "id": 306714,
+                    "resource_url": "https://api.discogs.com/artists/306714"
+                }
+            ],
+            "duration": "5:32"
+        },
+        {
+            "position": "10",
+            "type_": "track",
+            "title": "Do You Know Me",
+            "extraartists": [
+                {
+                    "name": "Ian McLagan",
+                    "anv": "",
+                    "join": "",
+                    "role": "Piano",
+                    "tracks": "",
+                    "id": 306714,
+                    "resource_url": "https://api.discogs.com/artists/306714"
+                }
+            ],
+            "duration": "2:30"
+        },
+        {
+            "position": "11",
+            "type_": "track",
+            "title": "Friends, Lovers Or Nothing",
+            "extraartists": [
+                {
+                    "name": "Ian McLagan",
+                    "anv": "",
+                    "join": "",
+                    "role": "Piano, Organ [Hammond B-3]",
+                    "tracks": "",
+                    "id": 306714,
+                    "resource_url": "https://api.discogs.com/artists/306714"
+                },
+                {
+                    "name": "Bob Reynolds",
+                    "anv": "",
+                    "join": "",
+                    "role": "Saxophone",
+                    "tracks": "",
+                    "id": 1002293,
+                    "resource_url": "https://api.discogs.com/artists/1002293"
+                },
+                {
+                    "name": "Bryan Lipps",
+                    "anv": "",
+                    "join": "",
+                    "role": "Trumpet",
+                    "tracks": "",
+                    "id": 1177444,
+                    "resource_url": "https://api.discogs.com/artists/1177444"
+                }
+            ],
+            "duration": "5:59"
+        }
+    ],
+    "443931": [
+        {
+            "position": "1",
+            "type_": "track",
+            "title": "Queen Of California",
+            "extraartists": [
+                {
+                    "name": "Greg Leisz",
+                    "anv": "",
+                    "join": "",
+                    "role": "Pedal Steel Guitar",
+                    "tracks": "",
+                    "id": 284482,
+                    "resource_url": "https://api.discogs.com/artists/284482"
+                }
+            ],
+            "duration": "4:09"
+        },
+        {
+            "position": "2",
+            "type_": "track",
+            "title": "The Age Of Worry",
+            "duration": "2:39"
+        },
+        {
+            "position": "3",
+            "type_": "track",
+            "title": "Shadow Days",
+            "extraartists": [
+                {
+                    "name": "Greg Leisz",
+                    "anv": "",
+                    "join": "",
+                    "role": "Pedal Steel Guitar",
+                    "tracks": "",
+                    "id": 284482,
+                    "resource_url": "https://api.discogs.com/artists/284482"
+                }
+            ],
+            "duration": "3:50"
+        },
+        {
+            "position": "4",
+            "type_": "track",
+            "title": "Speak For Me",
+            "duration": "3:45"
+        },
+        {
+            "position": "5",
+            "type_": "track",
+            "title": "Something Like Olivia",
+            "extraartists": [
+                {
+                    "name": "Jim Keltner",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums",
+                    "tracks": "",
+                    "id": 194118,
+                    "resource_url": "https://api.discogs.com/artists/194118"
+                },
+                {
+                    "name": "Joe Ferla",
+                    "anv": "",
+                    "join": "",
+                    "role": "Engineer [Additional]",
+                    "tracks": "",
+                    "id": 86674,
+                    "resource_url": "https://api.discogs.com/artists/86674"
+                }
+            ],
+            "duration": "3:01"
+        },
+        {
+            "position": "6",
+            "type_": "track",
+            "title": "Born And Raised",
+            "extraartists": [
+                {
+                    "name": "Greg Leisz",
+                    "anv": "",
+                    "join": "",
+                    "role": "Lap Steel Guitar",
+                    "tracks": "",
+                    "id": 284482,
+                    "resource_url": "https://api.discogs.com/artists/284482"
+                },
+                {
+                    "name": "David Crosby",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals",
+                    "tracks": "",
+                    "id": 253966,
+                    "resource_url": "https://api.discogs.com/artists/253966"
+                },
+                {
+                    "name": "Graham Nash",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals",
+                    "tracks": "",
+                    "id": 262945,
+                    "resource_url": "https://api.discogs.com/artists/262945"
+                }
+            ],
+            "duration": "4:49"
+        },
+        {
+            "position": "7",
+            "type_": "track",
+            "title": "If I Ever Get Around To Living",
+            "duration": "5:21"
+        },
+        {
+            "position": "8",
+            "type_": "track",
+            "title": "Love Is A Verb",
+            "duration": "2:27"
+        },
+        {
+            "position": "9",
+            "type_": "track",
+            "title": "Walt Grace's Submarine Test, January 1967",
+            "extraartists": [
+                {
+                    "name": "Chris Botti",
+                    "anv": "",
+                    "join": "",
+                    "role": "Trumpet",
+                    "tracks": "",
+                    "id": 199605,
+                    "resource_url": "https://api.discogs.com/artists/199605"
+                }
+            ],
+            "duration": "5:10"
+        },
+        {
+            "position": "10",
+            "type_": "track",
+            "title": "Whiskey, Whiskey, Whiskey",
+            "extraartists": [
+                {
+                    "name": "Greg Leisz",
+                    "anv": "",
+                    "join": "",
+                    "role": "Pedal Steel Guitar",
+                    "tracks": "",
+                    "id": 284482,
+                    "resource_url": "https://api.discogs.com/artists/284482"
+                }
+            ],
+            "duration": "4:39"
+        },
+        {
+            "position": "11",
+            "type_": "track",
+            "title": "A Face To Call Home",
+            "extraartists": [
+                {
+                    "name": "Sara Watkins",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals, Violin",
+                    "tracks": "",
+                    "id": 959549,
+                    "resource_url": "https://api.discogs.com/artists/959549"
+                }
+            ],
+            "duration": "4:46"
+        },
+        {
+            "position": "12",
+            "type_": "track",
+            "title": "Born And Raised (Reprise)",
+            "duration": "2:03"
+        }
+    ],
+    "586053": [
+        {
+            "position": "1",
+            "type_": "track",
+            "title": "Wildfire",
+            "duration": "4:15"
+        },
+        {
+            "position": "2",
+            "type_": "track",
+            "title": "Dear Marie",
+            "duration": "3:45"
+        },
+        {
+            "position": "3",
+            "type_": "track",
+            "title": "Waitin' On The Day",
+            "duration": "4:35"
+        },
+        {
+            "position": "4",
+            "type_": "track",
+            "title": "Paper Doll",
+            "duration": "4:20"
+        },
+        {
+            "position": "5",
+            "type_": "track",
+            "title": "Call Me The Breeze",
+            "extraartists": [
+                {
+                    "name": "J.J. Cale",
+                    "anv": "",
+                    "join": "",
+                    "role": "Written-By",
+                    "tracks": "",
+                    "id": 290587,
+                    "resource_url": "https://api.discogs.com/artists/290587"
+                }
+            ],
+            "duration": "3:27"
+        },
+        {
+            "position": "6",
+            "type_": "track",
+            "title": "Who You Love",
+            "extraartists": [
+                {
+                    "name": "John Mayer",
+                    "anv": "",
+                    "join": "",
+                    "role": "Arranged By [Horns]",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                },
+                {
+                    "name": "Larry Williams",
+                    "anv": "",
+                    "join": "",
+                    "role": "Arranged By [Horns]",
+                    "tracks": "",
+                    "id": 229176,
+                    "resource_url": "https://api.discogs.com/artists/229176"
+                },
+                {
+                    "name": "Katy Perry",
+                    "anv": "",
+                    "join": "",
+                    "role": "Written-By, Vocals",
+                    "tracks": "",
+                    "id": 971243,
+                    "resource_url": "https://api.discogs.com/artists/971243"
+                }
+            ],
+            "duration": "4:13"
+        },
+        {
+            "position": "7",
+            "type_": "track",
+            "title": "I Will Be Found (Lost At Sea)",
+            "extraartists": [
+                {
+                    "name": "Mark Bengtson",
+                    "anv": "",
+                    "join": "",
+                    "role": "Engineer [Protools], Mixed By [Assistant]",
+                    "tracks": "",
+                    "id": 3487209,
+                    "resource_url": "https://api.discogs.com/artists/3487209"
+                },
+                {
+                    "name": "Michael H. Brauer",
+                    "anv": "Michael H Brauer",
+                    "join": "",
+                    "role": "Mixed By",
+                    "tracks": "",
+                    "id": 154230,
+                    "resource_url": "https://api.discogs.com/artists/154230"
+                }
+            ],
+            "duration": "4:04"
+        },
+        {
+            "position": "8",
+            "type_": "track",
+            "title": "Wildfire",
+            "extraartists": [
+                {
+                    "name": "Frank Ocean",
+                    "anv": "",
+                    "join": "",
+                    "role": "Piano",
+                    "tracks": "",
+                    "id": 2013868,
+                    "resource_url": "https://api.discogs.com/artists/2013868"
+                },
+                {
+                    "name": "Frank Ocean",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals",
+                    "tracks": "",
+                    "id": 2013868,
+                    "resource_url": "https://api.discogs.com/artists/2013868"
+                },
+                {
+                    "name": "Christopher Breaux",
+                    "anv": "",
+                    "join": "",
+                    "role": "Written-By",
+                    "tracks": "",
+                    "id": 1280286,
+                    "resource_url": "https://api.discogs.com/artists/1280286"
+                }
+            ],
+            "duration": "1:28"
+        },
+        {
+            "position": "9",
+            "type_": "track",
+            "title": "You're No One 'Til Someone Lets You Down",
+            "duration": "2:48"
+        },
+        {
+            "position": "10",
+            "type_": "track",
+            "title": "Badge And Gun",
+            "duration": "3:15"
+        },
+        {
+            "position": "11",
+            "type_": "track",
+            "title": "On The Way Home",
+            "duration": "4:00"
+        }
+    ],
+    "2214418": [
+        {
+            "position": "A1",
+            "type_": "track",
+            "title": "Last Train Home",
+            "extraartists": [
+                {
+                    "name": "Sean Hurley",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass",
+                    "tracks": "",
+                    "id": 488614,
+                    "resource_url": "https://api.discogs.com/artists/488614"
+                },
+                {
+                    "name": "Aaron Sterling",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums",
+                    "tracks": "",
+                    "id": 602823,
+                    "resource_url": "https://api.discogs.com/artists/602823"
+                },
+                {
+                    "name": "Greg Phillinganes",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 108475,
+                    "resource_url": "https://api.discogs.com/artists/108475"
+                },
+                {
+                    "name": "John Mayer",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                },
+                {
+                    "name": "Lenny Castro",
+                    "anv": "",
+                    "join": "",
+                    "role": "Percussion",
+                    "tracks": "",
+                    "id": 252196,
+                    "resource_url": "https://api.discogs.com/artists/252196"
+                },
+                {
+                    "name": "Maren Morris",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals",
+                    "tracks": "",
+                    "id": 2866905,
+                    "resource_url": "https://api.discogs.com/artists/2866905"
+                }
+            ],
+            "duration": ""
+        },
+        {
+            "position": "A2",
+            "type_": "track",
+            "title": "Shouldn't Matter But It Does",
+            "extraartists": [
+                {
+                    "name": "Sean Hurley",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass",
+                    "tracks": "",
+                    "id": 488614,
+                    "resource_url": "https://api.discogs.com/artists/488614"
+                },
+                {
+                    "name": "Aaron Sterling",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums",
+                    "tracks": "",
+                    "id": 602823,
+                    "resource_url": "https://api.discogs.com/artists/602823"
+                },
+                {
+                    "name": "John Mayer",
+                    "anv": "",
+                    "join": "",
+                    "role": "Piano",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                },
+                {
+                    "name": "Greg Phillinganes",
+                    "anv": "",
+                    "join": "",
+                    "role": "Synth",
+                    "tracks": "",
+                    "id": 108475,
+                    "resource_url": "https://api.discogs.com/artists/108475"
+                }
+            ],
+            "duration": ""
+        },
+        {
+            "position": "A3",
+            "type_": "track",
+            "title": "New Light",
+            "extraartists": [
+                {
+                    "name": "Pino Palladino",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass",
+                    "tracks": "",
+                    "id": 208234,
+                    "resource_url": "https://api.discogs.com/artists/208234"
+                },
+                {
+                    "name": "Aaron Sterling",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums",
+                    "tracks": "",
+                    "id": 602823,
+                    "resource_url": "https://api.discogs.com/artists/602823"
+                },
+                {
+                    "name": "No I.D.",
+                    "anv": "",
+                    "join": "",
+                    "role": "Producer",
+                    "tracks": "",
+                    "id": 108618,
+                    "resource_url": "https://api.discogs.com/artists/108618"
+                }
+            ],
+            "duration": ""
+        },
+        {
+            "position": "A4",
+            "type_": "track",
+            "title": "Why You No Love Me",
+            "extraartists": [
+                {
+                    "name": "John Mayer",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass, Keyboards",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                },
+                {
+                    "name": "Aaron Sterling",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums",
+                    "tracks": "",
+                    "id": 602823,
+                    "resource_url": "https://api.discogs.com/artists/602823"
+                },
+                {
+                    "name": "Greg Phillinganes",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 108475,
+                    "resource_url": "https://api.discogs.com/artists/108475"
+                },
+                {
+                    "name": "Larry Goldings",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 258663,
+                    "resource_url": "https://api.discogs.com/artists/258663"
+                },
+                {
+                    "name": "Greg Leisz",
+                    "anv": "",
+                    "join": "",
+                    "role": "Pedal Steel Guitar",
+                    "tracks": "",
+                    "id": 284482,
+                    "resource_url": "https://api.discogs.com/artists/284482"
+                },
+                {
+                    "name": "Lenny Castro",
+                    "anv": "",
+                    "join": "",
+                    "role": "Percussion",
+                    "tracks": "",
+                    "id": 252196,
+                    "resource_url": "https://api.discogs.com/artists/252196"
+                },
+                {
+                    "name": "Maren Morris",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals",
+                    "tracks": "",
+                    "id": 2866905,
+                    "resource_url": "https://api.discogs.com/artists/2866905"
+                }
+            ],
+            "duration": ""
+        },
+        {
+            "position": "A5",
+            "type_": "track",
+            "title": "Wild Blue",
+            "extraartists": [
+                {
+                    "name": "Sean Hurley",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass",
+                    "tracks": "",
+                    "id": 488614,
+                    "resource_url": "https://api.discogs.com/artists/488614"
+                },
+                {
+                    "name": "Aaron Sterling",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums",
+                    "tracks": "",
+                    "id": 602823,
+                    "resource_url": "https://api.discogs.com/artists/602823"
+                },
+                {
+                    "name": "Jeff Babko",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 429108,
+                    "resource_url": "https://api.discogs.com/artists/429108"
+                },
+                {
+                    "name": "Lenny Castro",
+                    "anv": "",
+                    "join": "",
+                    "role": "Percussion",
+                    "tracks": "",
+                    "id": 252196,
+                    "resource_url": "https://api.discogs.com/artists/252196"
+                }
+            ],
+            "duration": ""
+        },
+        {
+            "position": "B1",
+            "type_": "track",
+            "title": "Shot In The Dark",
+            "extraartists": [
+                {
+                    "name": "John Mayer",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass, Piano",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                },
+                {
+                    "name": "Aaron Sterling",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums",
+                    "tracks": "",
+                    "id": 602823,
+                    "resource_url": "https://api.discogs.com/artists/602823"
+                },
+                {
+                    "name": "Lenny Castro",
+                    "anv": "",
+                    "join": "",
+                    "role": "Percussion",
+                    "tracks": "",
+                    "id": 252196,
+                    "resource_url": "https://api.discogs.com/artists/252196"
+                },
+                {
+                    "name": "Greg Phillinganes",
+                    "anv": "",
+                    "join": "",
+                    "role": "Synth",
+                    "tracks": "",
+                    "id": 108475,
+                    "resource_url": "https://api.discogs.com/artists/108475"
+                },
+                {
+                    "name": "Maren Morris",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals",
+                    "tracks": "",
+                    "id": 2866905,
+                    "resource_url": "https://api.discogs.com/artists/2866905"
+                }
+            ],
+            "duration": ""
+        },
+        {
+            "position": "B2",
+            "type_": "track",
+            "title": "I Guess I Just Feel Like",
+            "extraartists": [
+                {
+                    "name": "Sean Hurley",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass",
+                    "tracks": "",
+                    "id": 488614,
+                    "resource_url": "https://api.discogs.com/artists/488614"
+                },
+                {
+                    "name": "Aaron Sterling",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums, Percussion",
+                    "tracks": "",
+                    "id": 602823,
+                    "resource_url": "https://api.discogs.com/artists/602823"
+                },
+                {
+                    "name": "Matt Tuggle",
+                    "anv": "",
+                    "join": "",
+                    "role": "Engineer [Assistant]",
+                    "tracks": "",
+                    "id": 4030991,
+                    "resource_url": "https://api.discogs.com/artists/4030991"
+                }
+            ],
+            "duration": ""
+        },
+        {
+            "position": "B3",
+            "type_": "track",
+            "title": "Til The Right One Comes",
+            "extraartists": [
+                {
+                    "name": "John Mayer",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass, Keyboards",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                },
+                {
+                    "name": "Aaron Sterling",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums",
+                    "tracks": "",
+                    "id": 602823,
+                    "resource_url": "https://api.discogs.com/artists/602823"
+                }
+            ],
+            "duration": ""
+        },
+        {
+            "position": "B4",
+            "type_": "track",
+            "title": "Carry Me Away",
+            "extraartists": [
+                {
+                    "name": "Pino Palladino",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass",
+                    "tracks": "",
+                    "id": 208234,
+                    "resource_url": "https://api.discogs.com/artists/208234"
+                },
+                {
+                    "name": "Chad Franscoviak",
+                    "anv": "",
+                    "join": "",
+                    "role": "Co-producer",
+                    "tracks": "",
+                    "id": 658075,
+                    "resource_url": "https://api.discogs.com/artists/658075"
+                },
+                {
+                    "name": "Aaron Sterling",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums",
+                    "tracks": "",
+                    "id": 602823,
+                    "resource_url": "https://api.discogs.com/artists/602823"
+                },
+                {
+                    "name": "Matt Tuggle",
+                    "anv": "",
+                    "join": "",
+                    "role": "Engineer [Assistant]",
+                    "tracks": "",
+                    "id": 4030991,
+                    "resource_url": "https://api.discogs.com/artists/4030991"
+                },
+                {
+                    "name": "Ryan Lytle",
+                    "anv": "",
+                    "join": "",
+                    "role": "Engineer [Assistant]",
+                    "tracks": "",
+                    "id": 6659886,
+                    "resource_url": "https://api.discogs.com/artists/6659886"
+                },
+                {
+                    "name": "Greg Phillinganes",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 108475,
+                    "resource_url": "https://api.discogs.com/artists/108475"
+                },
+                {
+                    "name": "Jamie Muhoberac",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 109822,
+                    "resource_url": "https://api.discogs.com/artists/109822"
+                },
+                {
+                    "name": "John Mayer",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                },
+                {
+                    "name": "Michael Freeman (13)",
+                    "anv": "",
+                    "join": "",
+                    "role": "Mixed By [Assistant]",
+                    "tracks": "",
+                    "id": 6695562,
+                    "resource_url": "https://api.discogs.com/artists/6695562"
+                },
+                {
+                    "name": "Cautious Clay",
+                    "anv": "",
+                    "join": "",
+                    "role": "Vocals",
+                    "tracks": "",
+                    "id": 5590214,
+                    "resource_url": "https://api.discogs.com/artists/5590214"
+                }
+            ],
+            "duration": ""
+        },
+        {
+            "position": "B5",
+            "type_": "track",
+            "title": "All I Want Is To Be With You",
+            "extraartists": [
+                {
+                    "name": "Sean Hurley",
+                    "anv": "",
+                    "join": "",
+                    "role": "Bass",
+                    "tracks": "",
+                    "id": 488614,
+                    "resource_url": "https://api.discogs.com/artists/488614"
+                },
+                {
+                    "name": "Aaron Sterling",
+                    "anv": "",
+                    "join": "",
+                    "role": "Drums, Percussion",
+                    "tracks": "",
+                    "id": 602823,
+                    "resource_url": "https://api.discogs.com/artists/602823"
+                },
+                {
+                    "name": "Jeff Babko",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 429108,
+                    "resource_url": "https://api.discogs.com/artists/429108"
+                },
+                {
+                    "name": "John Mayer",
+                    "anv": "",
+                    "join": "",
+                    "role": "Keyboards",
+                    "tracks": "",
+                    "id": 254479,
+                    "resource_url": "https://api.discogs.com/artists/254479"
+                }
+            ],
+            "duration": ""
+        }
+    ],
+    "1164931": [
+        {
+            "position": "1",
+            "type_": "track",
+            "title": "Still Feel Like Your Man",
+            "duration": ""
+        },
+        {
+            "position": "2",
+            "type_": "track",
+            "title": "Emoji Of A Wave",
+            "duration": ""
+        },
+        {
+            "position": "3",
+            "type_": "track",
+            "title": "Helpless",
+            "duration": ""
+        },
+        {
+            "position": "4",
+            "type_": "track",
+            "title": "Love On The Weekend",
+            "duration": ""
+        },
+        {
+            "position": "5",
+            "type_": "track",
+            "title": "In The Blood",
+            "duration": ""
+        },
+        {
+            "position": "6",
+            "type_": "track",
+            "title": "Changing",
+            "duration": ""
+        },
+        {
+            "position": "7",
+            "type_": "track",
+            "title": "Theme From 'The Search For Everything'",
+            "duration": ""
+        },
+        {
+            "position": "8",
+            "type_": "track",
+            "title": "Moving On And Getting Over",
+            "duration": ""
+        },
+        {
+            "position": "9",
+            "type_": "track",
+            "title": "Never On The Day You Leave",
+            "duration": ""
+        },
+        {
+            "position": "10",
+            "type_": "track",
+            "title": "Rosie",
+            "duration": ""
+        },
+        {
+            "position": "11",
+            "type_": "track",
+            "title": "Roll It On Home",
+            "duration": ""
+        },
+        {
+            "position": "12",
+            "type_": "track",
+            "title": "You're Gonna Live Forever In Me",
+            "duration": ""
+        }
+    ]
+}
