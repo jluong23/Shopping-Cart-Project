@@ -193,12 +193,33 @@ nav li:active{
 
 
 .quantity-input {
-    padding: 0 1em;
     display: flex;
     align-items: center;
+    height: 31px;
 }
 .quantity-input input[type="number"]{
     width: 2em;
+    height: 100%;
+}
+.quantity-input button {
+    height: 100%;
+}
+
+/* checkout page */
+.checkout-product{
+    display: flex;
+    padding: 1em 0;
+    flex-direction: flex-start;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.checkout-product-image{
+    width: 25%;
+    margin: 0 2em;
+}
+.checkout-product-image > img{
+    width: 100%;
 }
 
 @media only screen and (min-width: 1000px) {
