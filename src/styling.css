@@ -199,6 +199,10 @@ nav li:active{
     justify-content: center;
 }
 
+.product-tracklist th {
+    font-size: 1.2em;
+}
+
 .quantity-input {
     display: flex;
     align-items: center;
