@@ -7,7 +7,7 @@ import DailySong from "./pages/DailySong";
 import React, { useEffect, useState } from 'react';
 import Footer from "./components/Footer";
 import Product from "./pages/Product";
-import Checkout from "./pages/Checkout";
+import ShoppingCart from "./pages/ShoppingCart";
 
 const App = () => {
   const [navBarVisible, setNavBarVisible] = useState(true);
@@ -61,7 +61,7 @@ const App = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/dailysong" element={<DailySong />} />
         <Route path="/product" element ={<Product addToBasket={addToBasket}/>} />
-        <Route path="/checkout" element ={<Checkout basket={basket} addToBasket={addToBasket} removeFromBasket={removeFromBasket}/>}/>
+        <Route path="/cart" element ={<ShoppingCart basket={basket} addToBasket={addToBasket} removeFromBasket={removeFromBasket}/>}/>
       </Routes>
     </div>
     {footerVisible ? <Footer /> : null}

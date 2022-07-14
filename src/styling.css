@@ -73,7 +73,7 @@ nav li:active{
     text-align: center;
 }
 
-.checkout-basket{
+.cart-icon{
     font-size: .7em;
     margin-top: 1em;
 }
@@ -212,8 +212,8 @@ nav li:active{
     height: 100%;
 }
 
-/* checkout page */
-.checkout-product{
+/* shopping-cart page */
+.shopping-cart-product{
     display: flex;
     padding: 1em 0;
     flex-direction: flex-start;
@@ -221,11 +221,11 @@ nav li:active{
     font-size: 1.5em;
 }
 
-.checkout-product-image{
+.shopping-cart-product-image{
     width: 25%;
     margin: 0 2em;
 }
-.checkout-product-image > img{
+.shopping-cart-product-image > img{
     width: 100%;
 }
 

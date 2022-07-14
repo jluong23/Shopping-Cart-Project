@@ -11,9 +11,9 @@ const Navbar= (props) =>{
         <li><Link to="/shop">Shop</Link></li>
         <li><Link to="/dailysong">Daily Song</Link></li>
         <li>
-          <Link to ="/checkout">
+          <Link to ="/cart">
             <BsFillBasket2Fill/>
-            <span className='checkout-basket'>{props.getBasketCount()}</span>
+            <span className='cart-icon'>{props.getBasketCount()}</span>
           </Link>
         </li>
 
