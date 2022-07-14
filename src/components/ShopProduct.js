@@ -17,7 +17,7 @@ const ShopProduct = (props) =>{
           <strong>{product.name}</strong>
         </Link>
         <p>
-          {product.price}
+          £{product.price}
         </p>
       </div>
   )
