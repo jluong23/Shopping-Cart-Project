@@ -34,6 +34,7 @@ footer{
     width: 100%;
     text-align: center;
     display: inline;
+    overflow: auto;
 }
 nav a{
     color: inherit;
@@ -153,6 +154,10 @@ nav li:active{
 
 /* product page */
 
+.product-content{
+    height: 130%;
+}
+
 .product{
     display: flex;
     flex-direction: row;
@@ -177,7 +182,6 @@ nav li:active{
     align-items: center;
 }
 
-
 .product-purchase > p {
     font-size: 2em;
     margin: 0;
@@ -185,10 +189,7 @@ nav li:active{
 
 .product-extra {
     margin-top: 2em;
-}
-.product-extra-content > * {
-    /* center extra info content */
-    margin-top: 2em;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -198,9 +199,6 @@ nav li:active{
     justify-content: center;
 }
 
-.product-tracklist td{
-    padding: .5em 1em;
-}
 .quantity-input {
     display: flex;
     align-items: center;

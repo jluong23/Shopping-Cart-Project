@@ -1,5 +1,6 @@
 import React from 'react';
 import trackLists from "../tracklists.json";
+import Table from 'react-bootstrap/Table';
 
 const Tracklist = (props) =>{
 
@@ -8,7 +9,7 @@ const Tracklist = (props) =>{
   let tracks = trackLists[id];
   
   return (
-    <table className='product-tracklist'>
+    <Table striped hover size='sm' className='product-tracklist'>
         <thead>
             <tr>
                 <td>Title</td>
@@ -25,7 +26,7 @@ const Tracklist = (props) =>{
                 )
             })}
         </tbody>
-    </table>
+    </Table>
   );
 }
 
