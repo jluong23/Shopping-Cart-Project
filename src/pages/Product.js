@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import productData from "../products.json";
 import Button from 'react-bootstrap/Button';
 import QuantityInput from "../components/QuantityInput";
-import Tracklist from "../components/Tracklist";
+import ProductExtra from "../components/ProductExtra";
 const Product = (props) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [quantity, setQuantity] = useState(1);
@@ -41,15 +41,7 @@ const Product = (props) => {
             <p>{product.description}</p>
           </div>
         </div>
-        <div className="product-extra">
-          <div className="product-extra-options">
-            <Button variant="success">Tracklist</Button>
-          </div>
-          <div className="product-extra-content">
-            {<Tracklist id={productId}/>}
-
-          </div>
-        </div>
+        <ProductExtra id={productId}/>
       </div>
     );
   };
