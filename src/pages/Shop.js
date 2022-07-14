@@ -7,7 +7,7 @@ const Shop = () => {
 
     return (
       <div id="shop">
-        <h1 id="shop-title">Shop</h1>
+        <h1>Shop</h1>
         <ul id="shop-products">
           {productData.map((p) => {
             return (
