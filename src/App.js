@@ -27,6 +27,8 @@ const App = () => {
       if(item["id"] == productId){
         productInBasket = true;
         return {"id": productId, "quantity": item["quantity"] + quantity};
+      }else{
+        return item;
       }
     });
     if(!productInBasket){
