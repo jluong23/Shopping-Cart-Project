@@ -10,7 +10,7 @@ const ShoppingCart = (props) => {
     let basket = props.basket;
     let products, costs, subtotal, summary;
     if(basket.length > 0){
-        
+        // content if shopping cart contains items
         costs = basket.map(({id, quantity}) => {
             let product = productData.find(product => product.id == id);
             return product.price * quantity;
@@ -18,7 +18,7 @@ const ShoppingCart = (props) => {
         subtotal = costs.reduce((a,b) => a + b);
         summary = (
             <div id="shopping-cart-summary">
-                <p>Subtotal: {subtotal}</p>
+                <p>Subtotal: £{subtotal}</p>
             </div>
         )
 
