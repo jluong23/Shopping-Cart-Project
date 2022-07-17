@@ -18,7 +18,7 @@ const ShoppingCart = (props) => {
         subtotal = costs.reduce((a,b) => a + b);
         summary = (
             <div id="shopping-cart-summary">
-                <p>Subtotal: £{subtotal}</p>
+                <p>Subtotal: £{subtotal.toFixed(2)}</p>
             </div>
         )
 
@@ -35,8 +35,7 @@ const ShoppingCart = (props) => {
                                 <div className="shopping-cart-product-info">
                                     <p>{product.name}</p>
                                     <p>£{product.price}</p>
-                                    <p>Total: £{product.price*quantity}</p>
-                                    <QuantityInput startQuantity={quantity}/>
+                                    <QuantityInput startQuantity={quantity} addToBasket={props.addToBasket} removeFromBasket={props.removeFromBasket} productId={id} minValue={0}/>
                                 </div>
                             </div>
                         );

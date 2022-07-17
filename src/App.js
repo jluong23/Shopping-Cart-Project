@@ -21,15 +21,15 @@ const App = () => {
   }
 
   const addToBasket = (productId, quantity) => {
-    // check if product is in basket already (need to update the quantity)
-    let increasedQuantity = false;
+    // check if product is in basket already (need to update the existing quantity)
+    let productInBasket = false;
     let newBasket = basket.map((item) => {
       if(item["id"] == productId){
-        increasedQuantity = true;
+        productInBasket = true;
         return {"id": productId, "quantity": item["quantity"] + quantity};
       }
     });
-    if(!increasedQuantity){
+    if(!productInBasket){
       newBasket = basket.concat({
           "id": productId, 
           "quantity": quantity
@@ -38,9 +38,20 @@ const App = () => {
     setBasket(newBasket);
   }
 
-  const removeFromBasket = (productId) => {
-    const newBasket = basket.filter((item) => item["id"] == productId);
-    setBasket(newBasket)
+  const removeFromBasket = (productId, quantity) => {
+    let newProductQuantity;
+    let productInBasket = false; 
+    let newBasket = basket.map((item) => {
+      if(item["id"] == productId){
+        productInBasket = true;
+        newProductQuantity = item["quantity"] - quantity;
+        return {"id": productId, "quantity": newProductQuantity};
+      }
+    });
+    if(newProductQuantity <= 0){
+      newBasket = basket.filter((item) => item["id"] != productId);
+    }
+    setBasket(newBasket);
   }
 
   const getBasketCount = () => {

@@ -33,7 +33,7 @@ const Product = (props) => {
             <h1>{product.name}</h1>
             <div className="product-purchase">
               <p>£{product.price}</p>
-              <QuantityInput setQuantity={setQuantity}/>
+              <QuantityInput setQuantity={setQuantity} productId={productId} minValue={1}/>
               <Button variant="warning" onClick={() => {props.addToBasket(productId, quantity)}}>
                 Add to Basket
               </Button>
