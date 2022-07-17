@@ -48,6 +48,8 @@ const App = () => {
         productInBasket = true;
         newProductQuantity = item["quantity"] - quantity;
         return {"id": productId, "quantity": newProductQuantity};
+      }else{
+        return item;
       }
     });
     if(newProductQuantity <= 0){

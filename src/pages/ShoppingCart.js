@@ -4,6 +4,8 @@ import React, { Component } from "react";
 import productData from "../products.json";
 import QuantityInput from "../components/QuantityInput";
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import {AiFillLock} from "react-icons/ai";
 
 
 const ShoppingCart = (props) => {
@@ -19,6 +21,9 @@ const ShoppingCart = (props) => {
         summary = (
             <div id="shopping-cart-summary">
                 <p>Subtotal: £{subtotal.toFixed(2)}</p>
+                <Button id="shopping-cart-checkout-button" size="lg" variant="dark"> 
+                    <AiFillLock/>Checkout 
+                </Button>
             </div>
         )
 
