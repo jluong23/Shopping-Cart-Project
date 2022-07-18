@@ -8,40 +8,22 @@ import React, { useEffect, useState } from 'react';
 import Footer from "./components/Footer";
 import Product from "./pages/Product";
 import ShoppingCart from "./pages/ShoppingCart";
-import API_CREDENTIALS from "./api_credentials.json";
-import {Buffer} from 'buffer';
-
+import SpotifyAPIHelper from "./SpotifyAPIHelper";
 const App = () => {
   
   const [navBarVisible, setNavBarVisible] = useState(true);
   const [footerVisible, setFooterVisible] = useState(true);
   const [basket, setBasket] = useState([]);
   const [apiToken, setApiToken] = useState(null);
-  
-  async function createClientCredentials(){
-    if(API_CREDENTIALS){
-      const requestOptions = {
-        headers: {
-          'Authorization': 'Basic ' + Buffer.from(API_CREDENTIALS.CLIENT_ID + ':' + API_CREDENTIALS.CLIENT_SECRET).toString('base64'),
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        method: 'POST',
-        body: new URLSearchParams(
-          {grant_type: 'client_credentials'}
-        )
-      }
-      let url = 'https://accounts.spotify.com/api/token';
-      let response = await fetch(url, requestOptions)
-      let token = await response.json();
-      setApiToken(token);
-    }else{
-      console.error("API_CREDENTIALS does not exist...")
-    }
-  }
+  const artistId = "0hEurMDQu99nJRq8pTxO14";
 
   useEffect(() => {
     // create client credentials for api on start
-    createClientCredentials();
+    let request = SpotifyAPIHelper.createClientCredentialsToken();
+    request.then(function(token){
+      // once request has complete, set api token as state
+      setApiToken(token);
+    });
   }, [])
 
   // function to hide or show header and footer
@@ -104,7 +86,7 @@ const App = () => {
         <Route path="/" 
           element={<Home setHeaderAndFooter={setHeaderAndFooter}/>}/>
         <Route path="/shop" element={<Shop />} />
-        <Route path="/dailysong" element={<DailySong />} />
+        <Route path="/dailysong" element={<DailySong apiToken={apiToken}/>} />
         <Route path="/product" element ={<Product addToBasket={addToBasket}/>} />
         <Route path="/cart" element ={<ShoppingCart basket={basket} addToBasket={addToBasket} removeFromBasket={removeFromBasket}/>}/>
       </Routes>
