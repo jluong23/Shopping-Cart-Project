@@ -17,6 +17,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+discog_get.py
 
 npm-debug.log*
 yarn-debug.log*

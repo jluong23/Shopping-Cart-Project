@@ -23,6 +23,7 @@ const App = () => {
     request.then(function(token){
       // once request has complete, set api token as state
       setApiToken(token);
+      console.log(token);
     });
   }, [])
 
