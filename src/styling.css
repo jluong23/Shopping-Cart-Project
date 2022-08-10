@@ -262,6 +262,25 @@ nav li:active{
     margin-left: auto;
 }
 
+/* daily song page */
+#daily-song-wrapper{
+    text-align: center;
+}
+
+#daily-song-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+#daily-song-image{
+    width: 35%;
+}
+#daily-song-image img{
+    width: 100%;
+    
+}
 @media only screen and (min-width: 1000px) {
     /* home */
     .home-image > img{
@@ -274,6 +293,11 @@ nav li:active{
 
     #shop-products{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #daily-song-image{
+        width: 15%;
+        
     }
 
 
