@@ -15,17 +15,19 @@ const App = () => {
   const [footerVisible, setFooterVisible] = useState(true);
   const [basket, setBasket] = useState([]);
   const [apiToken, setApiToken] = useState(null);
-  const artistId = "0hEurMDQu99nJRq8pTxO14";
+  const [artistId, setArtistId] = useState("0hEurMDQu99nJRq8pTxO14"); //artist id on spotify for John Mayer
 
   useEffect(() => {
     // create client credentials for api on start
     let request = SpotifyAPIHelper.createClientCredentialsToken();
+
     request.then(function(token){
       // once request has complete, set api token as state
-      setApiToken(token);
-      console.log(token);
+      if(!apiToken){
+        setApiToken(token);
+      }
     });
-  }, [])
+  })
 
   // function to hide or show header and footer
   const setHeaderAndFooter = (isVisible) => {
@@ -87,7 +89,7 @@ const App = () => {
         <Route path="/" 
           element={<Home setHeaderAndFooter={setHeaderAndFooter}/>}/>
         <Route path="/shop" element={<Shop />} />
-        <Route path="/dailysong" element={<DailySong apiToken={apiToken}/>} />
+        <Route path="/dailysong" element={<DailySong apiToken={apiToken} artistId={artistId}/>} />
         <Route path="/product" element ={<Product addToBasket={addToBasket}/>} />
         <Route path="/cart" element ={<ShoppingCart basket={basket} addToBasket={addToBasket} removeFromBasket={removeFromBasket}/>}/>
       </Routes>
