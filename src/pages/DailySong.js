@@ -8,9 +8,13 @@ import Button from 'react-bootstrap/Button';
 const DailySong = ({apiToken, artistId}) => {
   let [dailySong, setDailySong] = useState(null);
   let [dailyAlbum, setDailyAlbum] = useState(null);
+  // const customDate = new Date(2022,7,17) //used for testing, yy, m(index), dd
+  // let [todayDate, setTodayDate] = useState(customDate);
+  let [todayDate, setTodayDate] = useState(new Date());
+
   useEffect(() => {
     if(apiToken){
-      SpotifyAPIHelper.getDailyTrack(apiToken, artistId).then((result) => {
+      SpotifyAPIHelper.getDailyTrack(apiToken, artistId, todayDate).then((result) => {
         setDailySong(result.track);
         setDailyAlbum(result.album);
       });
@@ -20,7 +24,7 @@ const DailySong = ({apiToken, artistId}) => {
   const loadingMsg = (<p>Fetching daily song...</p>)
   const dailySongContent = dailySong && (
     <div id="daily-song-content">
-      <h3>{new Date().toDateString()}</h3>
+      <h3>{todayDate.toDateString()}</h3>
       <div id="daily-song-image">
         <img src={dailyAlbum.image}/>
       </div>

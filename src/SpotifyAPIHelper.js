@@ -84,14 +84,13 @@ class SpotifyAPIHelper{
   }
 
   // returns an object containing information for daily track
-  static async getDailyTrack(token, artistId){
+  static async getDailyTrack(token, artistId, date){
     // get the artist's albums
     let albumIds = await this.getAlbumIds(token, artistId);
     let albums = await this.getAlbums(token, albumIds);
 
-    // select a daily album based on today's seed (date+month)
-    let today = new Date();
-    let dailySeed = `${today.getDate()}${today.getMonth()}` 
+    // select a daily album based on date seed (date+month+year)
+    let dailySeed = `${date.getDate()}${date.getMonth()}${date.getYear()}` 
     let album = albums[this.generateRandomNumber(0, albums.length-1, dailySeed)]
     // select a track from the daily album using the same seed
     let tracks = album.tracks.items;
