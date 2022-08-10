@@ -20,14 +20,13 @@ const App = () => {
   useEffect(() => {
     // create client credentials for api on start
     let request = SpotifyAPIHelper.createClientCredentialsToken();
-
     request.then(function(token){
       // once request has complete, set api token as state
       if(!apiToken){
         setApiToken(token);
       }
     });
-  })
+  }, [])
 
   // function to hide or show header and footer
   const setHeaderAndFooter = (isVisible) => {

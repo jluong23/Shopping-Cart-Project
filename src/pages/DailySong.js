@@ -21,14 +21,15 @@ const DailySong = ({apiToken, artistId}) => {
     }
   }, []);
 
-  const loadingMsg = (<p>Fetching daily song...</p>)
+  const errorMsg = (<p>Could not fetch the daily song...</p>)
+
   const dailySongContent = dailySong && (
     <div id="daily-song-content">
       <h3>{todayDate.toDateString()}</h3>
       <div id="daily-song-image">
         <img src={dailyAlbum.image}/>
       </div>
-      <p>Track: {dailySong.name}</p>
+      <p>{dailySong.name}</p>
       <p>Album: {dailyAlbum.name}</p>
       <a href={dailySong.url} target="_blank">
         <Button size="lg">Listen on Spotify!</Button>
@@ -39,7 +40,7 @@ const DailySong = ({apiToken, artistId}) => {
     <div id="daily-song">
       <h1>Daily Song</h1>
       <div id="daily-song-wrapper">
-        {dailySong ? dailySongContent : loadingMsg}
+        {dailySong ? dailySongContent : errorMsg}
       </div>
     </div>
   );
