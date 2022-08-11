@@ -15,12 +15,10 @@ const DailySong = (props) => {
   
   useEffect(() => {
     let spotifyApiHelper = new SpotifyAPIHelper(process.env.REACT_APP_CLIENT_ID, process.env.REACT_APP_CLIENT_SECRET, artistId);
-    spotifyApiHelper.setClientCredentialsToken().then(() => {
       spotifyApiHelper.getDailyTrack(todayDate).then((result) => {
         setDailySong(result.track);
         setDailyAlbum(result.album);
       });
-    });
   }, []);
 
   const errorMsg = (<p>Could not fetch the daily song...</p>)

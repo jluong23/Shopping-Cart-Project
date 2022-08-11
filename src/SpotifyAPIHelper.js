@@ -51,8 +51,10 @@ class SpotifyAPIHelper{
   // using the api token, functions to make requests
   async createRestRequest(url, method){
     const requestOptions = {
+      // works without access token??
       headers: {
-        'Authorization': `${this.token.token_type} ${this.token.access_token}`
+        'Authorization': 'Bearer '
+        // 'Authorization': `${this.token.token_type} ${this.token.access_token}`
       },
       method: `${method}`,
     }
