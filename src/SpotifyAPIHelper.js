@@ -4,45 +4,22 @@ class SpotifyAPIHelper{
   static TOKEN_URL = "https://accounts.spotify.com/api/token";
   static seedrandom = require('seedrandom');
   
+  constructor(clientId, clientSecret, artistId){
+    this.artistId = artistId;
+    this.token = null; //token will need to be set
+    if(!clientSecret){
+      console.error("Missing API Client Secret...");
+    };
+    if(!clientId){
+      console.error("Missing API Client Id...");
+    }
+    this.authorizationHeader = `${clientId}:${clientSecret}`
+  }
+
   static generateRandomNumber(min, max, seed){
     let rng = this.seedrandom(seed);
     return Math.floor(rng.quick() * (max - min + 1)) + min;
   }
-  
-  // functions for creating an api token
-  static getAuthorizationHeader(){
-    return process.env.REACT_APP_CLIENT_ID + ':' + process.env.REACT_APP_CLIENT_SECRET;
-  }
-  static async createClientCredentialsToken(){
-    const requestOptions = {
-      headers: {
-        'Authorization': 'Basic ' + Buffer.from(this.getAuthorizationHeader()).toString('base64'),
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      method: 'POST',
-      body: new URLSearchParams(
-        {grant_type: 'client_credentials'}
-      )
-    }
-    let response = await fetch(this.TOKEN_URL, requestOptions)
-    let token = await response.json();
-    return token;
-  }
-  
-  // using the api token, functions to make requests
-  static async createRestRequest(url, method, token){
-    const requestOptions = {
-      headers: {
-        'Authorization': `${token.token_type} ${token.access_token}`
-      },
-      method: `${method}`,
-    }
-
-    let response = await fetch(url, requestOptions);
-    let responseJson = await response.json();
-    return responseJson;
-  }
-
   // Used to format a query object into string.
   // A query is attached at the end of a request url.
   // eg. https://api.spotify.com/v1/artists/id/albums?limit=50%include_groups=album
@@ -55,15 +32,45 @@ class SpotifyAPIHelper{
     return query.join("&");
   }
 
+  async setClientCredentialsToken(){
+    const requestOptions = {
+      headers: {
+        'Authorization': 'Basic ' + Buffer.from(this.authorizationHeader).toString('base64'),
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      method: 'POST',
+      body: new URLSearchParams(
+        {grant_type: 'client_credentials'}
+      )
+    }
+    let response = await fetch(SpotifyAPIHelper.TOKEN_URL, requestOptions)
+    let token = await response.json();
+    this.token = token;
+  }
+  
+  // using the api token, functions to make requests
+  async createRestRequest(url, method){
+    const requestOptions = {
+      headers: {
+        'Authorization': `${this.token.token_type} ${this.token.access_token}`
+      },
+      method: `${method}`,
+    }
+    let response = await fetch(url, requestOptions);
+    let responseJson = await response.json();
+    return responseJson;
+  }
+
+
   // returns a list of all album ids for an artist
-  static async getAlbumIds(token, artistId){
+  async getAlbumIds(){
     const queryOptions = {
       "limit": "50", //max number of albums per request
       "include_groups": "album", //exclude singles, appears_on and compilation 
     }
-    let query = this.createQueryString(queryOptions);
-    const url = `https://api.spotify.com/v1/artists/${artistId}/albums?${query}`;
-    let response = await this.createRestRequest(url, "GET", token);
+    let query = SpotifyAPIHelper.createQueryString(queryOptions);
+    const url = `https://api.spotify.com/v1/artists/${this.artistId}/albums?${query}`;
+    let response = await this.createRestRequest(url, "GET");
 
     let albums = response.items;
     let albumIds = albums.map((album) => {
@@ -73,28 +80,27 @@ class SpotifyAPIHelper{
   }
 
   // returns album objects given a list of album ids
-  static async getAlbums(token, albumIds){
+  async getAlbums(albumIds){
     const queryOptions = {
       "ids": albumIds.join(",")
     };
-    let query = this.createQueryString(queryOptions);
+    let query = SpotifyAPIHelper.createQueryString(queryOptions);
     const url = `https://api.spotify.com/v1/albums?${query}`;
-    let response = await this.createRestRequest(url, "GET", token);
+    let response = await this.createRestRequest(url, "GET");
     return response.albums;
   }
 
-  // returns an object containing information for daily track
-  static async getDailyTrack(token, artistId, date){
+  // returns an object containing information for daily track given a date
+  async getDailyTrack(date){
     // get the artist's albums
-    let albumIds = await this.getAlbumIds(token, artistId);
-    let albums = await this.getAlbums(token, albumIds);
-
+    let albumIds = await this.getAlbumIds();
+    let albums = await this.getAlbums(albumIds);
     // select a daily album based on date seed (date+month+year)
     let dailySeed = `${date.getDate()}${date.getMonth()}${date.getYear()}` 
-    let album = albums[this.generateRandomNumber(0, albums.length-1, dailySeed)]
+    let album = albums[SpotifyAPIHelper.generateRandomNumber(0, albums.length-1, dailySeed)]
     // select a track from the daily album using the same seed
     let tracks = album.tracks.items;
-    let track = tracks[this.generateRandomNumber(0, tracks.length-1, dailySeed)]
+    let track = tracks[SpotifyAPIHelper.generateRandomNumber(0, tracks.length-1, dailySeed)]
     return {
       "album": {
         "name": album.name,

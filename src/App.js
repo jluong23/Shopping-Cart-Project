@@ -8,25 +8,11 @@ import React, { useEffect, useState } from 'react';
 import Footer from "./components/Footer";
 import Product from "./pages/Product";
 import ShoppingCart from "./pages/ShoppingCart";
-import SpotifyAPIHelper from "./SpotifyAPIHelper";
 const App = () => {
   
   const [navBarVisible, setNavBarVisible] = useState(true);
   const [footerVisible, setFooterVisible] = useState(true);
   const [basket, setBasket] = useState([]);
-  const [apiToken, setApiToken] = useState(null);
-  const [artistId, setArtistId] = useState("0hEurMDQu99nJRq8pTxO14"); //artist id on spotify for John Mayer
-
-  useEffect(() => {
-    // create client credentials for api on start
-    let request = SpotifyAPIHelper.createClientCredentialsToken();
-    request.then(function(token){
-      // once request has complete, set api token as state
-      if(!apiToken){
-        setApiToken(token);
-      }
-    });
-  }, [])
 
   // function to hide or show header and footer
   const setHeaderAndFooter = (isVisible) => {
@@ -88,7 +74,7 @@ const App = () => {
         <Route path="/" 
           element={<Home setHeaderAndFooter={setHeaderAndFooter}/>}/>
         <Route path="/shop" element={<Shop />} />
-        <Route path="/dailysong" element={<DailySong apiToken={apiToken} artistId={artistId}/>} />
+        <Route path="/dailysong" element={<DailySong/>} />
         <Route path="/product" element ={<Product addToBasket={addToBasket}/>} />
         <Route path="/cart" element ={<ShoppingCart basket={basket} addToBasket={addToBasket} removeFromBasket={removeFromBasket}/>}/>
       </Routes>

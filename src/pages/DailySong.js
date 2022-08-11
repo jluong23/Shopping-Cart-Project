@@ -5,20 +5,22 @@ import SpotifyAPIHelper from "../SpotifyAPIHelper";
 import Button from 'react-bootstrap/Button';
 
 
-const DailySong = ({apiToken, artistId}) => {
+const DailySong = (props) => {
   let [dailySong, setDailySong] = useState(null);
   let [dailyAlbum, setDailyAlbum] = useState(null);
   // const customDate = new Date(2022,7,17) //used for testing, yy, m(index), dd
   // let [todayDate, setTodayDate] = useState(customDate);
   let [todayDate, setTodayDate] = useState(new Date());
-
+  const artistId = "0hEurMDQu99nJRq8pTxO14"; //artist id on spotify for John Mayer
+  
   useEffect(() => {
-    if(apiToken){
-      SpotifyAPIHelper.getDailyTrack(apiToken, artistId, todayDate).then((result) => {
+    let spotifyApiHelper = new SpotifyAPIHelper(process.env.REACT_APP_CLIENT_ID, process.env.REACT_APP_CLIENT_SECRET, artistId);
+    spotifyApiHelper.setClientCredentialsToken().then(() => {
+      spotifyApiHelper.getDailyTrack(todayDate).then((result) => {
         setDailySong(result.track);
         setDailyAlbum(result.album);
       });
-    }
+    });
   }, []);
 
   const errorMsg = (<p>Could not fetch the daily song...</p>)
