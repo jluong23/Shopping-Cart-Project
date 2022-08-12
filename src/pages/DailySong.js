@@ -6,8 +6,8 @@ import Button from 'react-bootstrap/Button';
 import {BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill} from 'react-icons/bs'
 import moment from "moment";
 const DailySong = (props) => {
-  // const artistId = "0hEurMDQu99nJRq8pTxO14"; //artist id on spotify for John Mayer
-  const artistId = "776Uo845nYHJpNaStv1Ds4"; //artist id on spotify for Hendrix
+  const artistId = "0hEurMDQu99nJRq8pTxO14"; //artist id on spotify for John Mayer
+  // const artistId = "776Uo845nYHJpNaStv1Ds4"; //artist id on spotify for Hendrix
   // const artistId = "6zlR5ttMfMNmwf2lecU9Cc"; //artist id on spotify for Sam Fender
 
   let [dailySong, setDailySong] = useState(null);
@@ -18,7 +18,8 @@ const DailySong = (props) => {
   );
   const [showNextTrackButton, setShowNextTrackButton] = useState(false);
   const [showPreviousTrackButton, setShowPreviousTrackButton] = useState(true);
-  
+  const [endOfDay, setEndOfDay] = useState(moment().endOf('day'));
+  const [timeUntilEndOfDay, setTimeUntilEndOfDay] = useState("99:99:99");
 
   const setDailyTrack = (date) => {
     spotifyApiHelper.getDailyTrack(date).then((result) => {
@@ -32,6 +33,20 @@ const DailySong = (props) => {
       // set the client credentials token for api calls, then set daily track with today's date
       setDailyTrack(currentDate);
     });
+    const interval = setInterval(() => {
+      let diff = endOfDay.diff(moment());
+      if(diff < 0){
+        // countdown has finished, change endOfDay to next day (reset)
+        // add 1 minute to ensure next day is set correctly
+        setEndOfDay(moment().add(10, 'minute').endOf('day'));
+      }
+      setTimeUntilEndOfDay(moment(diff).format('HH:mm:ss'));
+      
+    }, 1000);
+
+    return function cleanup() {
+      clearInterval(interval);
+    }
   }, []);
 
   // number of days to change by
@@ -59,13 +74,12 @@ const DailySong = (props) => {
     }
   }
   
-  
-
   const errorMsg = (<p>Could not fetch the daily song...</p>)
 
   const dailySongContent = dailySong && (
     <div id="daily-song-content">
       <h3>{currentDate.format('dddd MMMM Do YYYY')}</h3>
+      <p>New song in {timeUntilEndOfDay}</p>
       <div id="daily-song-top">
         <span className="change-song-icon">
           {showPreviousTrackButton && <BsFillArrowLeftCircleFill onClick={() => {changeTrackButtonClicked(-1)}}/>}
@@ -79,7 +93,7 @@ const DailySong = (props) => {
       </div>
       <p>{dailySong.name}</p>
       <p>Album: {dailyAlbum.name}</p>
-      <a href={dailySong.uri} target="_blank">
+      <a href={dailySong.uri} target="_blank" rel="noreferrer">
         <Button size="lg">Listen on Spotify!</Button>
       </a>
     </div>
