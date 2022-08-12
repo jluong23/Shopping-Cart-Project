@@ -8,10 +8,10 @@ class SpotifyAPIHelper{
     this.artistId = artistId;
     this.token = null; //token will need to be set
     if(!clientSecret){
-      console.error("Missing API Client Secret...");
+      console.log("Missing API Client Secret...");
     };
     if(!clientId){
-      console.error("Missing API Client Id...");
+      console.log("Missing API Client Id...");
     }
     this.authorizationHeader = `${clientId}:${clientSecret}`
   }
@@ -53,8 +53,7 @@ class SpotifyAPIHelper{
     const requestOptions = {
       // works without access token??
       headers: {
-        'Authorization': 'Bearer '
-        // 'Authorization': `${this.token.token_type} ${this.token.access_token}`
+        'Authorization': `${this.token.token_type} ${this.token.access_token}`
       },
       method: `${method}`,
     }
@@ -92,13 +91,13 @@ class SpotifyAPIHelper{
     return response.albums;
   }
 
-  // returns an object containing information for daily track given a date
+  // returns an object containing information for daily track given a moment date object
   async getDailyTrack(date){
     // get the artist's albums
     let albumIds = await this.getAlbumIds();
     let albums = await this.getAlbums(albumIds);
     // select a daily album based on date seed (date+month+year)
-    let dailySeed = `${date.getDate()}${date.getMonth()}${date.getYear()}` 
+    let dailySeed = date.format('L'); 
     let album = albums[SpotifyAPIHelper.generateRandomNumber(0, albums.length-1, dailySeed)]
     // select a track from the daily album using the same seed
     let tracks = album.tracks.items;
@@ -109,10 +108,12 @@ class SpotifyAPIHelper{
         "image": album.images[0].url,
         "release_date": album.release_date,
         "url": album.external_urls.spotify,
+        "uri": album.uri,
       },
       "track": {
         "name": track.name,
         "url": track.external_urls.spotify,
+        "uri": track.uri,
       }
     };
   }
