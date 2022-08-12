@@ -72,7 +72,6 @@ class SpotifyAPIHelper{
     let query = SpotifyAPIHelper.createQueryString(queryOptions);
     const url = `https://api.spotify.com/v1/artists/${this.artistId}/albums?${query}`;
     let response = await this.createRestRequest(url, "GET");
-
     let albums = response.items;
     let albumIds = albums.map((album) => {
       return album.id;
@@ -82,13 +81,30 @@ class SpotifyAPIHelper{
 
   // returns album objects given a list of album ids
   async getAlbums(albumIds){
-    const queryOptions = {
-      "ids": albumIds.join(",")
-    };
-    let query = SpotifyAPIHelper.createQueryString(queryOptions);
-    const url = `https://api.spotify.com/v1/albums?${query}`;
-    let response = await this.createRestRequest(url, "GET");
-    return response.albums;
+    const ALBUM_LIMIT = 20;
+    let albumBlocks = [];
+    // 2d array where each subarray is of size ALBUM_LIMIT, containing album ids.
+    for (let i = 0; i < albumIds.length; i += ALBUM_LIMIT){
+      albumBlocks.push(albumIds.slice(i, i + ALBUM_LIMIT));
+    }
+
+    // convert album ids into album objects
+    for (let i = 0; i < albumBlocks.length; i += 1){
+      let idBlock = albumBlocks[i];
+      let queryOptions = {
+        "ids": idBlock.join(",")
+      };
+      let query = SpotifyAPIHelper.createQueryString(queryOptions);
+      let url = `https://api.spotify.com/v1/albums?${query}`;
+      let response = await this.createRestRequest(url, "GET");
+      albumBlocks[i] = response.albums;            
+    }
+
+    // reduce 2d array of album objects into 1d array 
+    let albums = albumBlocks.reduce((prev, next) => {
+      return prev.concat(next);
+    });
+    return albums;
   }
 
   // returns an object containing information for daily track given a moment date object

@@ -6,7 +6,10 @@ import Button from 'react-bootstrap/Button';
 import {BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill} from 'react-icons/bs'
 import moment from "moment";
 const DailySong = (props) => {
-  const artistId = "0hEurMDQu99nJRq8pTxO14"; //artist id on spotify for John Mayer
+  // const artistId = "0hEurMDQu99nJRq8pTxO14"; //artist id on spotify for John Mayer
+  const artistId = "776Uo845nYHJpNaStv1Ds4"; //artist id on spotify for Hendrix
+  // const artistId = "6zlR5ttMfMNmwf2lecU9Cc"; //artist id on spotify for Sam Fender
+
   let [dailySong, setDailySong] = useState(null);
   let [dailyAlbum, setDailyAlbum] = useState(null);
   let [currentDate, setCurrentDate] = useState(moment());
