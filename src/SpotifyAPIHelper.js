@@ -3,7 +3,14 @@ import {Buffer} from 'buffer';
 class SpotifyAPIHelper{
   static TOKEN_URL = "https://accounts.spotify.com/api/token";
   static seedrandom = require('seedrandom');
-  
+  /**
+   * Create a new SpotifyAPIHelper for an artist given API credentials.
+   * You should run setClientCredentialsToken() after instantiating a SpotifyAPIHelper
+   * to start using the API.
+   * @param {string} clientId 
+   * @param {string} clientSecret 
+   * @param {string} artistId 
+   */
   constructor(clientId, clientSecret, artistId){
     this.artistId = artistId;
     this.token = null; //token will need to be set
@@ -20,10 +27,16 @@ class SpotifyAPIHelper{
     let rng = this.seedrandom(seed);
     return Math.floor(rng.quick() * (max - min + 1)) + min;
   }
-  // Used to format a query object into string.
-  // A query is attached at the end of a request url.
-  // eg. https://api.spotify.com/v1/artists/id/albums?limit=50%include_groups=album
-  // query is after the ? 
+
+  /**
+   * Used to format a query object into string.
+   * A query is attached at the end of a request url.
+   * eg. https://api.spotify.com/v1/artists/id/albums?limit=50%include_groups=album,
+   * The query is after the '?'. 
+   * @param {Object<string, string>} queryOptions 
+   * @returns Formatted query string to be appended to url request.
+   */
+
   static createQueryString(queryOptions){
     let query = Object.keys(queryOptions).map((key => {
       let value = queryOptions[key];
@@ -32,6 +45,10 @@ class SpotifyAPIHelper{
     return query.join("&");
   }
 
+  /**
+   * Sets the token attribute, making a request to SpotifyAPIHelper.TOKEN_URL and including 
+   * clientId and clientSecret values.
+   */
   async setClientCredentialsToken(){
     const requestOptions = {
       headers: {
@@ -48,7 +65,13 @@ class SpotifyAPIHelper{
     this.token = token;
   }
   
-  // using the api token, functions to make requests
+  // 
+  /**
+   * Using the set api token, function which makes a request to a URL.
+   * @param {string} url 
+   * @param {string} method - 'GET' or 'POST' 
+   * @returns 
+   */
   async createRestRequest(url, method){
     const requestOptions = {
       // works without access token??
@@ -63,7 +86,10 @@ class SpotifyAPIHelper{
   }
 
 
-  // returns a list of all album ids for an artist
+  /**
+   * Returns a list of all album ids for the artistId attribute.
+   * @returns 
+   */
   async getAlbumIds(){
     const queryOptions = {
       "limit": "50", //max number of albums per request
@@ -79,7 +105,11 @@ class SpotifyAPIHelper{
     return albumIds;
   }
 
-  // returns album objects given a list of album ids
+  /**
+   * Returns album objects given a list of album IDs.
+   * @param {String[]} albumIds - strings
+   * @returns {Promise<String>}
+   */
   async getAlbums(albumIds){
     const ALBUM_LIMIT = 20;
     let albumBlocks = [];
@@ -107,31 +137,40 @@ class SpotifyAPIHelper{
     return albums;
   }
 
-  // returns an object containing information for daily track given a moment date object
-  async getDailyTrack(date){
+  /**
+   * Returns an object containing information for a random track given a seed.
+   * @param {string} seed 
+   * @returns 
+   */
+  async getRandomTrack(seed){
     // get the artist's albums
     let albumIds = await this.getAlbumIds();
     let albums = await this.getAlbums(albumIds);
-    // select a daily album based on date seed (date+month+year)
-    let dailySeed = date.format('L'); 
-    let album = albums[SpotifyAPIHelper.generateRandomNumber(0, albums.length-1, dailySeed)]
+    let album = albums[SpotifyAPIHelper.generateRandomNumber(0, albums.length-1, seed)]
     // select a track from the daily album using the same seed
     let tracks = album.tracks.items;
-    let track = tracks[SpotifyAPIHelper.generateRandomNumber(0, tracks.length-1, dailySeed)]
-    return {
-      "album": {
-        "name": album.name,
-        "image": album.images[0].url,
-        "release_date": album.release_date,
-        "url": album.external_urls.spotify,
-        "uri": album.uri,
-      },
-      "track": {
-        "name": track.name,
-        "url": track.external_urls.spotify,
-        "uri": track.uri,
-      }
+    let track = tracks[SpotifyAPIHelper.generateRandomNumber(0, tracks.length-1, seed)]
+    let result = {
+      "name": track.name,
+      "album_name": album.name,
+      "url": track.external_urls.spotify,
+      "uri": track.uri,
+      "release_date": album.release_date,
+      "image": album.images[0].url,
+      "album_url": album.external_urls.spotify,
+      "album_uri": album.uri,
     };
+    return result;
+  }
+
+  /**
+   * Get n random tracks for the artistId set.
+   * @param {int} n - How many tracks to achieve, should be the length of seeds.
+   * @param {string[]} seeds - The seed used for each track.
+   * @param {boolean} unique - Should all tracks be unique? No repeats.
+   */
+  async getRandomTracks(n, seeds, unique = true){
+    
   }
 
     

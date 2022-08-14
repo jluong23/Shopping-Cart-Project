@@ -11,20 +11,19 @@ const DailySong = (props) => {
   // const artistId = "6zlR5ttMfMNmwf2lecU9Cc"; //artist id on spotify for Sam Fender
 
   let [dailySong, setDailySong] = useState(null);
-  let [dailyAlbum, setDailyAlbum] = useState(null);
   let [currentDate, setCurrentDate] = useState(moment());
   const [spotifyApiHelper, setSpotifyApiHelper] = useState(
     new SpotifyAPIHelper(process.env.REACT_APP_CLIENT_ID, process.env.REACT_APP_CLIENT_SECRET, artistId)
   );
-  const [showNextTrackButton, setShowNextTrackButton] = useState(false);
   const [showPreviousTrackButton, setShowPreviousTrackButton] = useState(true);
+  const [showNextTrackButton, setShowNextTrackButton] = useState(false);
   const [endOfDay, setEndOfDay] = useState(moment().endOf('day'));
   const [timeUntilEndOfDay, setTimeUntilEndOfDay] = useState("99:99:99");
 
   const setDailyTrack = (date) => {
-    spotifyApiHelper.getDailyTrack(date).then((result) => {
-      setDailySong(result.track);
-      setDailyAlbum(result.album);
+    let dateSeed = date.format('L');
+    spotifyApiHelper.getRandomTrack(dateSeed).then((result) => {
+      setDailySong(result);
     });
   };
 
@@ -49,8 +48,8 @@ const DailySong = (props) => {
     }
   }, []);
 
-  // number of days to change by
   const changeTrackButtonClicked = (days) => {
+    // days: number of days to change by when button is clicked
     let newDate = currentDate.clone().add(days, "days");
     let maxDate = moment();
     //subtract a minute for range to be slightly larger, being able to access the minimum day
@@ -85,14 +84,14 @@ const DailySong = (props) => {
           {showPreviousTrackButton && <BsFillArrowLeftCircleFill onClick={() => {changeTrackButtonClicked(-1)}}/>}
         </span>
           <div id="daily-song-image">
-            <img src={dailyAlbum.image}/>
+            <img src={dailySong.image}/>
           </div>
         <span className="change-song-icon">
           {showNextTrackButton && <BsFillArrowRightCircleFill onClick={() => {changeTrackButtonClicked(+1)}}/>}
         </span>
       </div>
       <p>{dailySong.name}</p>
-      <p>Album: {dailyAlbum.name}</p>
+      <p>Album: {dailySong.album_name}</p>
       <a href={dailySong.uri} target="_blank" rel="noreferrer">
         <Button size="lg">Listen on Spotify!</Button>
       </a>
