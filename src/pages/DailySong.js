@@ -6,12 +6,13 @@ import Button from 'react-bootstrap/Button';
 import {BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill} from 'react-icons/bs'
 import moment from "moment";
 const DailySong = (props) => {
+  const NUM_TRACKS = 8;
   const artistId = "0hEurMDQu99nJRq8pTxO14"; //artist id on spotify for John Mayer
   // const artistId = "776Uo845nYHJpNaStv1Ds4"; //artist id on spotify for Hendrix
   // const artistId = "6zlR5ttMfMNmwf2lecU9Cc"; //artist id on spotify for Sam Fender
-
-  let [dailySong, setDailySong] = useState(null);
-  let [currentDate, setCurrentDate] = useState(moment());
+  
+  const [tracks, setTracks] = useState([]);
+  const [currentTrack, setCurrentTrack] = useState(null);
   const [spotifyApiHelper, setSpotifyApiHelper] = useState(
     new SpotifyAPIHelper(process.env.REACT_APP_CLIENT_ID, process.env.REACT_APP_CLIENT_SECRET, artistId)
   );
@@ -20,22 +21,32 @@ const DailySong = (props) => {
   const [endOfDay, setEndOfDay] = useState(moment().endOf('day'));
   const [timeUntilEndOfDay, setTimeUntilEndOfDay] = useState("99:99:99");
 
-  const setDailyTrack = (date) => {
-    let dateSeed = date.format('L');
-    spotifyApiHelper.getRandomTrack(dateSeed).then((result) => {
-      setDailySong(result);
+  const createSeedsByDate = () => {
+    // create seeds for each track. 
+    // Last element will be todays date.
+    // First element will be todays date - NUM_TRACKS number of days.
+    let seeds = [];
+    let today = moment();
+    for (let i = 0; i < NUM_TRACKS; i++) {
+      seeds[i] = today.clone().subtract(NUM_TRACKS-i, "days").format('L');
+    }
+    return seeds;
+  }
+  const loadTracks = () => {
+    // load random tracks which are unique
+    spotifyApiHelper.getRandomTracks(NUM_TRACKS, createSeedsByDate(NUM_TRACKS)).then((result) => {
+      setTracks(result);
+      // set current track to last element in tracks
+      setCurrentTrack(result[result.length-1])
     });
   };
 
   useEffect(() => {
     spotifyApiHelper.setClientCredentialsToken().then(() => {
       // set the client credentials token for api calls, then set daily track with today's date
-      setDailyTrack(currentDate);
+      loadTracks();
 
       // TOOD: example usage for getRandomTracks, need to implement with correct seeds.
-      // spotifyApiHelper.getRandomTracks(5, ["1","2","3","4","5"], true).then((result) => {
-      //   console.log(result);
-      // });
     });
     const interval = setInterval(() => {
       let diff = endOfDay.diff(moment());
@@ -53,34 +64,33 @@ const DailySong = (props) => {
     }
   }, []);
 
-  const changeTrackButtonClicked = (days) => {
-    // days: number of days to change by when button is clicked
-    let newDate = currentDate.clone().add(days, "days");
-    let maxDate = moment();
-    //subtract a minute for range to be slightly larger, being able to access the minimum day
-    let minDate = maxDate.clone().subtract(7, 'days').subtract(1, 'minutes'); 
-    if(newDate.isBefore(maxDate) && newDate.isSameOrAfter(minDate)){
-      // within range
-      setCurrentDate(newDate);
-      setDailyTrack(newDate);
-      // hide buttons if at min or max dates. Else show both buttons.
-      if(newDate.format("MMM Do YY") == maxDate.format("MMM Do YY")){
-        setShowPreviousTrackButton(true);
-        setShowNextTrackButton(false);
-      }else if(newDate.format("MMM Do YY") == minDate.format("MMM Do YY")){
+  /**
+   * hide buttons if at min or max dates, preventing date to exceed boundary. Else show both buttons.
+   * @param {*} changeInDays - Number of days / index to change by
+   */
+  const changeTrackButtonClicked = (changeInDays) => {
+      // change current track
+      let newIndex = tracks.indexOf(currentTrack) + changeInDays;
+      setCurrentTrack(tracks[newIndex]);
+
+      if(newIndex == 0){
+        // min boundary, don't show previous track button
         setShowPreviousTrackButton(false);
         setShowNextTrackButton(true);
+      }else if(newIndex == tracks.length - 1){
+        // max boundary, don't show next track button
+        setShowPreviousTrackButton(true);
+        setShowNextTrackButton(false);
       }else{
         setShowPreviousTrackButton(true);
         setShowNextTrackButton(true);
       }
-
     }
-  }
+  
   
   const errorMsg = (<p>Could not fetch the daily song...</p>)
-
-  const dailySongContent = dailySong && (
+  let currentDate = moment().subtract(tracks.length - tracks.indexOf(currentTrack) + 1, "days");
+  const dailySongContent = currentTrack && (
     <div id="daily-song-content">
       <h3>{currentDate.format('dddd MMMM Do YYYY')}</h3>
       <p>New song in {timeUntilEndOfDay}</p>
@@ -89,15 +99,15 @@ const DailySong = (props) => {
           {showPreviousTrackButton && <BsFillArrowLeftCircleFill onClick={() => {changeTrackButtonClicked(-1)}}/>}
         </span>
           <div id="daily-song-image">
-            <img src={dailySong.image}/>
+            <img src={currentTrack.image}/>
           </div>
         <span className="change-song-icon">
           {showNextTrackButton && <BsFillArrowRightCircleFill onClick={() => {changeTrackButtonClicked(+1)}}/>}
         </span>
       </div>
-      <p>{dailySong.name}</p>
-      <p>Album: {dailySong.album_name}</p>
-      <a href={dailySong.uri} target="_blank" rel="noreferrer">
+      <p>{currentTrack.name}</p>
+      <p>Album: {currentTrack.album_name}</p>
+      <a href={currentTrack.uri} target="_blank" rel="noreferrer">
         <Button size="lg">Listen on Spotify!</Button>
       </a>
     </div>
@@ -106,7 +116,7 @@ const DailySong = (props) => {
     <div id="daily-song">
       <h1>Daily Song</h1>
       <div id="daily-song-wrapper">
-        {dailySong ? dailySongContent : errorMsg}
+        {currentTrack ? dailySongContent : errorMsg}
       </div>
     </div>
   );

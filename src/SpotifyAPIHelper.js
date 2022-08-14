@@ -1,5 +1,5 @@
 import {Buffer} from 'buffer';
-
+import seedrandom from 'seedrandom';
 class SpotifyAPIHelper{
   static TOKEN_URL = "https://accounts.spotify.com/api/token";
   static seedrandom = require('seedrandom');
@@ -139,10 +139,14 @@ class SpotifyAPIHelper{
 
   /**
    * Returns an object containing information for a random track given a seed.
-   * @param {string} [seed] - Default seed is 'abc'.
+   * @param {string} [seed]
    * @returns 
    */
-  async getRandomTrack(seed = "abc"){
+  async getRandomTrack(seed){
+    if(!seed){
+      // generate a random number if seed was not given
+      seed = seedrandom().quick();
+    }
     // get the artist's albums
     let albumIds = await this.getAlbumIds();
     let albums = await this.getAlbums(albumIds);
@@ -179,13 +183,40 @@ class SpotifyAPIHelper{
     // typical case, n>1
     let tracks = [];
     let track;
+    let trackIsUnique;
     for (let i = 0; i < n; i++) {
+      let duplicatesFound = 0; //how many times the new track retrieved is a duplicate in tracks
       do{
-        track = await this.getRandomTrack(seeds[i]);
-      }while(unique && tracks.findIndex((t) => {return t.id == track.id}) > -1 );
+        // by using duplicatesFound in the seed, the new song retrieved is deterministic
+        let seed = `${seeds[i]}${duplicatesFound}`;
+        track = await this.getRandomTrack(seed);
+        // with unique=false, while loop is always false, break out and append track
+        if(unique){
+          // Append a new track (repeat) if this track already exists in tracks.
+          trackIsUnique = true;
+          if(this.containsTrack(tracks, track)){
+            trackIsUnique = false;
+            duplicatesFound++;
+          }
+        }
+      }while(unique && !trackIsUnique);
       tracks[i] = track;
     }
     return tracks;
+  }
+
+  /**
+   * Check if a list of tracks contains a given track
+   * @param {*} tracks 
+   * @param {*} track 
+   * @returns 
+   */
+  containsTrack(tracks, track){
+    if(tracks.length == 0){
+      return false;
+    }
+    let trackIds = tracks.map((t) => {return t.id;})
+    return trackIds.indexOf(track.id) > -1;
   }
 }
 
