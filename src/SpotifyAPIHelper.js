@@ -108,7 +108,7 @@ class SpotifyAPIHelper{
   /**
    * Returns album objects given a list of album IDs.
    * @param {String[]} albumIds - strings
-   * @returns {Promise<String>}
+   * @returns
    */
   async getAlbums(albumIds){
     const ALBUM_LIMIT = 20;
@@ -139,10 +139,10 @@ class SpotifyAPIHelper{
 
   /**
    * Returns an object containing information for a random track given a seed.
-   * @param {string} seed 
+   * @param {string} [seed] - Default seed is 'abc'.
    * @returns 
    */
-  async getRandomTrack(seed){
+  async getRandomTrack(seed = "abc"){
     // get the artist's albums
     let albumIds = await this.getAlbumIds();
     let albums = await this.getAlbums(albumIds);
@@ -151,6 +151,7 @@ class SpotifyAPIHelper{
     let tracks = album.tracks.items;
     let track = tracks[SpotifyAPIHelper.generateRandomNumber(0, tracks.length-1, seed)]
     let result = {
+      "id": track.id,
       "name": track.name,
       "album_name": album.name,
       "url": track.external_urls.spotify,
@@ -164,16 +165,28 @@ class SpotifyAPIHelper{
   }
 
   /**
-   * Get n random tracks for the artistId set.
-   * @param {int} n - How many tracks to achieve, should be the length of seeds.
+   * Get n random tracks for the set artistId attribute. 
+   * @param {int} n - How many tracks to retrieve, should be the length of seeds if seeds are given.
    * @param {string[]} seeds - The seed used for each track.
    * @param {boolean} unique - Should all tracks be unique? No repeats.
    */
-  async getRandomTracks(n, seeds, unique = true){
-    
+  async getRandomTracks(n, seeds = [], unique = true){
+    if(!n || n == 0){
+      return [];
+    }else if(n == 1){
+      return this.getRandomTrack(seeds[0]);
+    }
+    // typical case, n>1
+    let tracks = [];
+    let track;
+    for (let i = 0; i < n; i++) {
+      do{
+        track = await this.getRandomTrack(seeds[i]);
+      }while(unique && tracks.findIndex((t) => {return t.id == track.id}) > -1 );
+      tracks[i] = track;
+    }
+    return tracks;
   }
-
-    
 }
 
 export default SpotifyAPIHelper;

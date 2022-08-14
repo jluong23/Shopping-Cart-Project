@@ -31,6 +31,11 @@ const DailySong = (props) => {
     spotifyApiHelper.setClientCredentialsToken().then(() => {
       // set the client credentials token for api calls, then set daily track with today's date
       setDailyTrack(currentDate);
+
+      // TOOD: example usage for getRandomTracks, need to implement with correct seeds.
+      // spotifyApiHelper.getRandomTracks(5, ["1","2","3","4","5"], true).then((result) => {
+      //   console.log(result);
+      // });
     });
     const interval = setInterval(() => {
       let diff = endOfDay.diff(moment());
