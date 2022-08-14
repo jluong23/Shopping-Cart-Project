@@ -72,7 +72,6 @@ const DailySong = (props) => {
       // change current track
       let newIndex = tracks.indexOf(currentTrack) + changeInDays;
       setCurrentTrack(tracks[newIndex]);
-
       if(newIndex == 0){
         // min boundary, don't show previous track button
         setShowPreviousTrackButton(false);
@@ -89,7 +88,8 @@ const DailySong = (props) => {
   
   
   const errorMsg = (<p>Could not fetch the daily song...</p>)
-  let currentDate = moment().subtract(tracks.length - tracks.indexOf(currentTrack) + 1, "days");
+  // last index of tracks is today's date (subtract 0 days)
+  let currentDate = moment().subtract(tracks.length-1-tracks.indexOf(currentTrack), "days");
   const dailySongContent = currentTrack && (
     <div id="daily-song-content">
       <h3>{currentDate.format('dddd MMMM Do YYYY')}</h3>
