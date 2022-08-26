@@ -5,7 +5,7 @@ This is my implementation for the [Odin Project's final project](https://www.the
 
 The main functionality has been implemented which includes viewing, adding and removing albums to a shopping cart page.
 
-Current work includes working with the Spotify API to show daily songs.
+A daily song is also provided via the Spotify API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is viewable via GitHub Pages [here](https://jluong23.github.io/shopping-cart-project/)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is viewable via GitHub Pages [here](https://jluong23.github.io/shopping-cart-project/).
 

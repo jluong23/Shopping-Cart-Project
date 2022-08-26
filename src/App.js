@@ -8,10 +8,12 @@ import React, { useEffect, useState } from 'react';
 import Footer from "./components/Footer";
 import Product from "./pages/Product";
 import ShoppingCart from "./pages/ShoppingCart";
+import CartModal from "./components/CartModal";
 const App = () => {
   
   const [navBarVisible, setNavBarVisible] = useState(true);
   const [footerVisible, setFooterVisible] = useState(true);
+  const [cartModalVisible, setCartModalVisible] = useState(false);
   const [basket, setBasket] = useState([]);
 
   // function to hide or show header and footer
@@ -64,18 +66,20 @@ const App = () => {
       count+=item["quantity"];
     });
     return count;
-}
+  }
+
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
     {navBarVisible ? <Navbar basket={basket} getBasketCount={getBasketCount}/> : null} 
+    {cartModalVisible && <CartModal/>}
     <div className="page-content">
       <Routes>
         <Route path="/" 
           element={<Home setHeaderAndFooter={setHeaderAndFooter}/>}/>
         <Route path="/shop" element={<Shop />} />
         <Route path="/dailysong" element={<DailySong/>} />
-        <Route path="/product" element ={<Product addToBasket={addToBasket}/>} />
+        <Route path="/product" element ={<Product setCartModalVisible={setCartModalVisible} addToBasket={addToBasket}/>} />
         <Route path="/cart" element ={<ShoppingCart basket={basket} addToBasket={addToBasket} removeFromBasket={removeFromBasket}/>}/>
       </Routes>
     </div>

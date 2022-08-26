@@ -5,7 +5,7 @@ import productData from "../products.json";
 import Button from 'react-bootstrap/Button';
 import QuantityInput from "../components/QuantityInput";
 import ProductExtra from "../components/ProductExtra";
-const Product = (props) => {
+const Product = ({addToBasket, setCartModalVisible}) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [quantity, setQuantity] = useState(1);
 
@@ -22,6 +22,11 @@ const Product = (props) => {
       return errorMsg
     }
 
+    const handleAddToBasket = () => {
+      addToBasket(productId, quantity);
+      setCartModalVisible(true);
+    }
+
     // successful case where product exists
     return (
       <div className="product-content">
@@ -34,7 +39,7 @@ const Product = (props) => {
             <div className="product-purchase">
               <p>£{product.price}</p>
               <QuantityInput setQuantity={setQuantity} productId={productId} minValue={1}/>
-              <Button variant="warning" onClick={() => {props.addToBasket(productId, quantity)}}>
+              <Button variant="warning" onClick={() => {handleAddToBasket()}}>
                 Add to Basket
               </Button>
             </div>

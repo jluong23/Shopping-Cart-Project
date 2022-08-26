@@ -1,16 +1,19 @@
+html{
+    min-width: fit-content;
+}
+
 #root{
-    height: 100%;
+    /* height: 100%; */
+    width: 100%;
 }
 
 body{
     margin: 0;
-    min-width: 700px;
     background-image: url('assets/standard_pattern.png');
-    height: 100vh;
 }
 .site-title{
     font-size: 1.2em;
-    background-color: #555;
+    min-width: 121px;
     margin-right: 1em;
 }
 
@@ -22,7 +25,7 @@ nav {
     justify-content: space-between;
     align-items: stretch;
     padding: .5em 1.5em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     width: 100%;
 }
 
@@ -165,7 +168,12 @@ nav li:active{
     align-items: center;
 }
 
+.product > *{
+    margin: 0 1em;
+}
+
 .product-image{
+    min-width: 200px;
     width: 300px;
 }
 .product-image > img{
@@ -214,6 +222,17 @@ nav li:active{
 }
 .quantity-input button {
     height: 100%;
+}
+
+/* used when user adds product to cart, popup
+underneath cart icon.  */
+.shopping-cart-modal {
+    position:fixed;
+    right: 0;
+    width: 250px;
+    height: 250px;
+
+    border: .1em solid black;
 }
 
 /* shopping-cart page */
