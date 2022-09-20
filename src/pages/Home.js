@@ -25,7 +25,7 @@ const Home = (props) => {
       </div>
       <div className="home-description">
         <h1>
-          The man, the myth, the legend
+          John Mayer Fan Shop
         </h1>
       </div>
       <div className="home-options">
